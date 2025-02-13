@@ -104,7 +104,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center me-4" href="#">
-                <img src="{{ asset('images/logo.jpeg') }}" alt="Logo de la Red de Investigadores">
+                <img src="{{ asset('images/logo_R.PNG') }}" alt="Logo de la Red de Investigadores">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -135,7 +135,11 @@
                     <div class="hero-content">
                         <h1 class="display-4 fw-bold">VISIÓN</h1>
                         <p class="lead">Ser una red de referencia global en ingeniería de procesos sostenibles, impulsando la innovación, la investigación y la formación de futuros líderes en el sector.</p>
+                        <div class="d-flex justify-content-center my-4">
+        <img src="REDU.png" alt="Logo RIPIS" class="me-2" style="max-height: 250px;" />
+    </div>
                     </div>
+                    
                 </div>
             </div>
             <div class="carousel-item">
@@ -156,9 +160,7 @@
         </button>
     </div>
 
-    <div class="d-flex justify-content-center my-4">
-        <img src="REDU.png" alt="Logo RIPIS" class="me-2" style="max-height: 250px;" />
-    </div>
+    
 
     <!-- Sección de Redes Sociales -->
     <div class="container my-5">
