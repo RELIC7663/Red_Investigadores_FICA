@@ -120,6 +120,8 @@
         </div>
     </nav>
 
+
+        
     <!-- Hero Section (Carrusel) -->
     <div id="heroCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -132,7 +134,7 @@
                     <div class="hero-overlay"></div>
                     <div class="hero-content">
                         <h1 class="display-4 fw-bold">VISIÓN</h1>
-                        <p class="lead">INSERTAR VISIÓN</p>
+                        <p class="lead">Ser una red de referencia global en ingeniería de procesos sostenibles, impulsando la innovación, la investigación y la formación de futuros líderes en el sector.</p>
                     </div>
                 </div>
             </div>
@@ -141,7 +143,7 @@
                     <div class="hero-overlay"></div>
                     <div class="hero-content">
                         <h1 class="display-4 fw-bold">MISIÓN</h1>
-                        <p class="lead">INGRESAR MISION</p>
+                        <p class="lead">Promover el intercambio de conocimientos, la colaboración internacional y el desarrollo de tecnologías sostenibles que contribuyan al bienestar de las comunidades y al cuidado del medio ambiente.</p>
                     </div>
                 </div>
             </div>
@@ -152,6 +154,10 @@
         <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
             <span class="carousel-control-next-icon"></span>
         </button>
+    </div>
+
+    <div class="d-flex justify-content-center my-4">
+        <img src="REDU.png" alt="Logo RIPIS" class="me-2" style="max-height: 250px;" />
     </div>
 
     <!-- Sección de Redes Sociales -->
