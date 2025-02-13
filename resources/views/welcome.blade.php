@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +18,7 @@
             background-size: cover;
             position: relative;
         }
+
         body::before {
             content: "";
             position: absolute;
@@ -24,7 +26,8 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.2); /* Menos opaco */
+            background: rgba(0, 0, 0, 0.2);
+            /* Menos opaco */
             z-index: -1;
         }
 
@@ -32,34 +35,42 @@
         .navbar {
             box-shadow: 0 4px 6px rgba(255, 255, 255, 0.42);
             height: 70px;
-            background: rgba(220, 0, 0, 0.9); /* Rojo con transparencia */
+            background: rgba(220, 0, 0, 0.9);
+            /* Rojo con transparencia */
             backdrop-filter: blur(10px);
         }
+
         .navbar-brand img {
-            height: 50px; /* Tamaño del logo */
+            height: 50px;
+            /* Tamaño del logo */
             width: auto;
         }
+
         .navbar-nav {
             font-weight: 500;
             font-size: 18px;
         }
+
         .navbar-nav .nav-link {
             padding: 10px 15px;
             color: white;
             transition: all 0.3s ease-in-out;
         }
+
         .navbar-nav .nav-link:hover {
             color: rgb(255, 255, 255);
             font-weight: bold;
             background: rgba(255, 255, 255, 0.2);
             border-radius: 5px;
         }
+
         .navbar-nav .btn-acceder {
             background-color: white;
             color: rgb(220, 0, 0);
             border-radius: 5px;
             font-weight: bold;
         }
+
         .navbar-nav .btn-acceder:hover {
             background-color: rgb(255, 255, 255);
             color: rgb(180, 0, 0);
@@ -75,12 +86,14 @@
             text-align: center;
             position: relative;
         }
+
         .hero-overlay {
             position: absolute;
             width: 100%;
             height: 100%;
             background: rgba(0, 0, 0, 0.4);
         }
+
         .hero-content {
             position: relative;
             z-index: 2;
@@ -88,16 +101,18 @@
 
         /* Íconos de Redes Sociales */
         .social-icons i {
-            font-size: 50px; 
+            font-size: 50px;
             display: block;
             margin-bottom: 10px;
             transition: transform 0.3s ease-in-out;
         }
+
         .social-icons i:hover {
             transform: scale(1.1);
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navbar -->
@@ -112,8 +127,33 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Quiénes Somos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Investigación</a></li>
+
+                    <!-- Menú desplegable Quiénes Somos -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="quienesSomosDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Quiénes Somos
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="quienesSomosDropdown">
+                            <li><a class="dropdown-item" href="/estatutos">Estatutos</a></li>
+                            <li><a class="dropdown-item" href="/objetivos">Objetivos</a></li>
+                            <li><a class="dropdown-item" href="/directiva">Directiva</a></li>
+                            <li><a class="dropdown-item" href="/miembros">Miembros</a></li>
+                            <li><a class="dropdown-item" href="/senescyt">Aprobación Senescyt</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Menú desplegable Investigación -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="investigacionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Investigación
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="investigacionDropdown">
+                            <li><a class="dropdown-item" href="#">Áreas de Investigación</a></li>
+                            <li><a class="dropdown-item" href="#">Líneas de Investigación</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
                     <li class="nav-item"><a class="nav-link btn btn-acceder px-3" href="#">Acceder</a></li>
                 </ul>
             </div>
@@ -121,7 +161,6 @@
     </nav>
 
 
-        
     <!-- Hero Section (Carrusel) -->
     <div id="heroCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
         <div class="carousel-indicators">
@@ -136,10 +175,9 @@
                         <h1 class="display-4 fw-bold">VISIÓN</h1>
                         <p class="lead">Ser una red de referencia global en ingeniería de procesos sostenibles, impulsando la innovación, la investigación y la formación de futuros líderes en el sector.</p>
                         <div class="d-flex justify-content-center my-4">
-        <img src="REDU.png" alt="Logo RIPIS" class="me-2" style="max-height: 250px;" />
-    </div>
+                            <img src="REDU.png" alt="Logo RIPIS" class="me-2" style="max-height: 250px;" />
+                        </div>
                     </div>
-                    
                 </div>
             </div>
             <div class="carousel-item">
@@ -160,26 +198,20 @@
         </button>
     </div>
 
-    
-
     <!-- Sección de Redes Sociales -->
     <div class="container my-5">
         <div class="row text-center">
             <div class="col-md-4 social-icons">
-                <a href="https://www.facebook.com/" target="_blank"  class="text-primary">
+                <a href="https://www.facebook.com/" target="_blank" class="text-primary">
                     <i class="bi bi-facebook"></i></a>
-
             </div>
             <div class="col-md-4 social-icons">
                 <a href="https://www.instagram.com/" target="_blank" class="text-danger">
                     <i class="bi bi-instagram"></i></a>
-
             </div>
             <div class="col-md-4 social-icons">
                 <a href="https://www.linkedin.com" target="_blank" class="text-info">
-                <i class="bi bi-linkedin"></i></a>
-               
-
+                    <i class="bi bi-linkedin"></i></a>
             </div>
         </div>
     </div>
@@ -192,5 +224,21 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Script para hover en el dropdown -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var dropdowns = document.querySelectorAll(".nav-item.dropdown");
+            dropdowns.forEach(function(dropdown) {
+                dropdown.addEventListener("mouseover", function() {
+                    this.querySelector(".dropdown-menu").classList.add("show");
+                });
+                dropdown.addEventListener("mouseleave", function() {
+                    this.querySelector(".dropdown-menu").classList.remove("show");
+                });
+            });
+        });
+    </script>
+
 </body>
+
 </html>
