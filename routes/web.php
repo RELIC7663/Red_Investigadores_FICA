@@ -6,12 +6,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//contacto
+Route::get('/contacto', function () {
+    return view('contacto.contacto');
+});
+
+
 //Quienes Somos
 
 Route::get('/estatutos', function () {
     return view('Quienes_somos.estatutos');
 });
-
+    
 Route::get('/objetivos', function () {
     return view('Quienes_somos.objetivos');
 });

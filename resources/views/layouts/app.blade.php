@@ -122,6 +122,8 @@
         @yield('content')
     </div>
 
-    <!-- Agregar aquí el pie de página u otros elementos comunes si es necesario -->
+    <!--pie de página u otros elementos comunes  -->
+    @include('layouts.footer')
+
 </body>
 </html>
