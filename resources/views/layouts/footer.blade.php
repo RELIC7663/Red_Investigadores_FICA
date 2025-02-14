@@ -29,20 +29,10 @@
             </div>
 
 
-            <!-- Sección de enlaces -->
-            <div class="col-md-4 text-center text-md-end">
-                <h5 class="fw-bold">Información</h5>
-                <a href="#" class="text-white d-block mb-1">Términos y Condiciones</a>
-                <a href="#" class="text-white d-block mb-1">Política de Privacidad</a>
-                <a href="#" class="text-white d-block">Mapa del Sitio</a>
-            </div>
+            
         </div>
 
-        <!-- Línea divisoria y derechos reservados -->
-        <hr class="bg-light my-3">
-        <div class="text-center">
-            <p class="mb-0">&copy; 2025 <a href="#" class="text-primary fw-bold">Red Investigadores</a> | Todos los derechos reservados.</p>
-        </div>
+        
 
     </div>
 </footer>
