@@ -43,3 +43,8 @@ Route::get('/Investigacion', function () {
 Route::get('/Investigacion_Areas', function () {
     return view('Investigacion.AreasInvestigacion');
 });
+
+//Eventos
+Route::get('/Eventos', function () {
+    return view('Eventos.Eventos');
+});
