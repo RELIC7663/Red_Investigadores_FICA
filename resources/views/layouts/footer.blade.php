@@ -1,6 +1,8 @@
 <footer class="bg-dark text-white py-4 mt-5">
     <div class="container">
+
         <div class="row text-center text-md-start align-items-center">
+
             <!-- Sección de contacto -->
             <div class="col-md-4 mb-4 mb-md-0">
                 <h5 class="fw-bold">CONTACTO</h5>
@@ -9,15 +11,23 @@
                 <p><i class="bi bi-envelope"></i> <a href="mailto:investigacion@utn.edu.ec" class="text-white">investigacion@utn.edu.ec</a></p>
             </div>
 
-            <!-- Logo y redes sociales -->
-            <div class="col-md-4 text-center mb-4 mb-md-0">
-                <img width="130" height="53" src="https://investigacion.utn.edu.ec/wp-content/uploads/2023/04/cropped-Recurso-1.png" class="img-fluid" alt="Logo UTN" loading="lazy">
-                <div class="d-flex justify-content-center mt-3">
+
+            <div class="col-md-4">
+                
+            </div>
+            
+
+            <!-- Logo de la universidad -->
+            <div class="col-md-4 text-center">
+                <img width="130" height="53" src="https://investigacion.utn.edu.ec/wp-content/uploads/2023/04/cropped-Recurso-1.png" class="attachment-full size-full wp-image-704" alt="" loading="lazy">
+                <div class="d-flex justify-content-center">
+
                     <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-4"></i></a>
                     <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-4"></i></a>
                     <a href="#" class="text-white mx-2"><i class="bi bi-linkedin fs-4"></i></a>
                 </div>
             </div>
+
 
             <!-- Sección de enlaces -->
             <div class="col-md-4 text-center text-md-end">
@@ -33,5 +43,6 @@
         <div class="text-center">
             <p class="mb-0">&copy; 2025 <a href="#" class="text-primary fw-bold">Red Investigadores</a> | Todos los derechos reservados.</p>
         </div>
+
     </div>
 </footer>

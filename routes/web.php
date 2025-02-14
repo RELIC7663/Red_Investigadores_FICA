@@ -39,3 +39,15 @@ Route::get('/senescyt', function () {
 Route::get('/Investigacion', function () {
     return view('Investigacion.Investigacion');
 });
+
+Route::get('/Investigacion_Areas', function () {
+    return view('Investigacion.AreasInvestigacion');
+});
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
+//Eventos
+Route::get('/Eventos', function () {
+    return view('Eventos.Eventos');
+});
