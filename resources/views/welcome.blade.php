@@ -48,7 +48,7 @@
                     </div>
                     
                     <div class="d-flex justify-content-center my-4">
-                        <img src="https://aenit.utn.edu.ec/2024/wp-content/uploads/2024/05/1.4-e1715742644411.jpg" alt="Logo RIPIS" class="me-2" style="max-height: 375px;" />
+                        <img src="https://aenit.utn.edu.ec/2024/wp-content/uploads/2024/05/1.4-e1715742644411.jpg" alt="Logo RIPIS" class="me-2" style="max-height: 100px;" />
                     </div>
                 </div>
             </div>
@@ -72,8 +72,11 @@
                 <div class="hero-content">
                     <h1 class="display-4 fw-bold">MISIÓN</h1>
                     <p class="lead">Promover el intercambio de conocimientos, la colaboración internacional y el desarrollo de tecnologías sostenibles que contribuyan al bienestar de las comunidades y al cuidado del medio ambiente.</p>
+                    
+                    
                     <div class="d-flex justify-content-center my-4">
-                        <img src="REDU_2.png" alt="Logo RIPIS" class="me-2" style="max-height: 250px;" />
+                        
+                        <img src="https://aenit.utn.edu.ec/2024/wp-content/uploads/2024/05/1.3-e1715742677392.jpg" alt="Logo RIPIS" class="me-2" style="max-height: 250px;" />
                     </div>
                 </div>
             </div>
