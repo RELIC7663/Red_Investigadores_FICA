@@ -43,3 +43,7 @@ Route::get('/Investigacion', function () {
 Route::get('/Investigacion_Areas', function () {
     return view('Investigacion.AreasInvestigacion');
 });
+
+Route::get('/login', function () {
+    return view('auth.login');
+});
