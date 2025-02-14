@@ -28,8 +28,6 @@
             
         </div>
 
-        <div class="text-center mt-3">
-            <p class="mb-0">&copy; 2025 <a href="#" class="text-primary">Red Investigadores</a> . Todos los derechos reservados.</p>
-        </div>
+        
     </div>
 </footer>

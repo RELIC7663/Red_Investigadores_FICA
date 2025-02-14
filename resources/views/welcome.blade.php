@@ -71,22 +71,9 @@
     
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+ 
     <!-- Script para hover en el dropdown -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var dropdowns = document.querySelectorAll(".nav-item.dropdown");
-            dropdowns.forEach(function(dropdown) {
-                dropdown.addEventListener("mouseover", function() {
-                    this.querySelector(".dropdown-menu").classList.add("show");
-                });
-                dropdown.addEventListener("mouseleave", function() {
-                    this.querySelector(".dropdown-menu").classList.remove("show");
-                });
-            });
-        });
-    </script>
+    
 
 </body>
 
