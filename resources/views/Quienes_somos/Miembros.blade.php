@@ -31,12 +31,16 @@
         <!-- Tarjeta de la Coordinadora -->
         <div class="col-12 d-flex justify-content-center mb-4">
             <div class="card text-center shadow-lg border-0 p-4" style="max-width: 400px;">
-                <img src="https://via.placeholder.com/150" class="rounded-circle mx-auto d-block" alt="Daisy Elizabeth">
+                <img src="https://cloud3.utn.edu.ec/prod/apex_util.get_blob_file?a=109&s=5817555250894&p=24&d=127934339771000230&i=127941847471080505&p_pk1=1002873048&p_pk2=&p_ck=9ZCIfEQY3Vp2h3KAYy4cMOVdPvAL9PPuBGsTem2vXM-zNkwa5jXQi_GGtlMds97DtFJ2pnb9cYTx5bK-VHMWsw&p_content_disposition=inline" 
+                    class="rounded-circle mx-auto d-block" 
+                    alt="Daisy Elizabeth" 
+                    width="100" height="100">
                 <h5 class="mt-3 fw-bold text-danger">Daisy Elizabeth Imbaquingo Esparza</h5>
                 <p class="text-muted">Coordinadora de la Red</p>
                 <a href="#" class="text-danger fs-4"><i class="bi bi-person-badge"></i></a>
             </div>
         </div>
+        
 
         <div class="row justify-content-center">
 
@@ -44,19 +48,18 @@
             <!-- Miembro 1 -->
             <div class="col-md-4 col-lg-3 mb-4">
                 <div class="card text-center shadow-lg border-0 p-3">
-                    <img src="https://via.placeholder.com/150" class="rounded-circle mx-auto d-block"
-                        alt="Willam Esparza">
+                    <img decoding="async" width="100" height="100" class="elementor-animation-grow attachment-full size-full wp-image-3316 mx-auto d-block" alt="" src="https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/wresparza.png" loading="lazy">
                     <h5 class="mt-3 fw-bold">Willam Esparza Encalada</h5>
                     <p class="text-muted">wresparza@utn.edu.ec</p>
                     <a href="#" class="text-success fs-4"><i class="bi bi-orcid"></i></a>
                 </div>
             </div>
 
+            
             <!-- Miembro 2 -->
             <div class="col-md-4 col-lg-3 mb-4">
                 <div class="card text-center shadow-lg border-0 p-3">
-                    <img src="https://via.placeholder.com/150" class="rounded-circle mx-auto d-block"
-                        alt="Robert Mauricio">
+                    <img decoding="async" width="100" height="100" class="elementor-animation-grow attachment-full size-full wp-image-3316 mx-auto d-block" alt="" src="https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/rmvalencia.png" loading="lazy">
                     <h5 class="mt-3 fw-bold">Robert Mauricio Valencia Chapi</h5>
                     <p class="text-muted">rmvalencia@utn.edu.ec</p>
                     <a href="#" class="text-success fs-4"><i class="bi bi-orcid"></i></a>
@@ -66,8 +69,7 @@
             <!-- Miembro 3 -->
             <div class="col-md-4 col-lg-3 mb-4">
                 <div class="card text-center shadow-lg border-0 p-3">
-                    <img src="https://via.placeholder.com/150" class="rounded-circle mx-auto d-block"
-                        alt="Brizeida Nohemi">
+                    <img decoding="async" width="100" height="100" class="elementor-animation-grow attachment-full size-full wp-image-3316 mx-auto d-block" alt="" src="https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/bngamez.png" loading="lazy">
                     <h5 class="mt-3 fw-bold">Brizeida Nohemi Gamez Aparicio</h5>
                     <p class="text-muted">bngamez@utn.edu.ec</p>
                     <a href="#" class="text-success fs-4"><i class="bi bi-orcid"></i></a>
@@ -77,8 +79,9 @@
             <!-- Miembro 4 -->
             <div class="col-md-4 col-lg-3 mb-4">
                 <div class="card text-center shadow-lg border-0 p-3">
-                    <img src="https://via.placeholder.com/150" class="rounded-circle mx-auto d-block"
-                        alt="Julio Guerra">
+
+
+                    <img decoding="async" width="100" height="100" class="elementor-animation-grow attachment-full size-full wp-image-3316 mx-auto d-block" alt="" src="https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/jeguerra.png" loading="lazy">
                     <h5 class="mt-3 fw-bold">Julio Esteban Guerra Massón</h5>
                     <p class="text-muted">jeguera@utn.edu.ec</p>
                     <a href="#" class="text-success fs-4"><i class="bi bi-orcid"></i></a>
@@ -88,7 +91,8 @@
             <!-- Miembro 5 -->
             <div class="col-md-4 col-lg-3 mb-4">
                 <div class="card text-center shadow-lg border-0 p-3">
-                    <img src="https://via.placeholder.com/150" class="rounded-circle mx-auto d-block" alt="Cosme Mejía">
+                    <img decoding="async" width="100" height="100" class="elementor-animation-grow attachment-full size-full wp-image-3316 mx-auto d-block" alt="" src="https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/cdmejia.png" loading="lazy">
+                
                     <h5 class="mt-3 fw-bold">Cosme Damián Mejía Echeverría</h5>
                     <p class="text-muted">cdmejia@utn.edu.ec</p>
                     <a href="#" class="text-success fs-4"><i class="bi bi-orcid"></i></a>
@@ -98,8 +102,7 @@
             <!-- Miembro 6 -->
             <div class="col-md-4 col-lg-3 mb-4">
                 <div class="card text-center shadow-lg border-0 p-3">
-                    <img src="https://via.placeholder.com/150" class="rounded-circle mx-auto d-block"
-                        alt="Marcia Catalina">
+                    <img decoding="async" width="100" height="100" class="elementor-animation-grow attachment-full size-full wp-image-3316 mx-auto d-block" alt="" src="https://investigacion.utn.edu.ec/wp-content/uploads/2024/10/mcramirez.png" loading="lazy">
                     <h5 class="mt-3 fw-bold">Marcia Catalina Ramírez Galárraga</h5>
                     <p class="text-muted">mcramirez@utn.edu.ec</p>
                     <a href="#" class="text-success fs-4"><i class="bi bi-orcid"></i></a>
