@@ -32,6 +32,11 @@
             background: rgba(220, 0, 0, 0.9);
             backdrop-filter: blur(10px);
         }
+        .navbar-brand img {
+            height: 50px; /* Tamaño adecuado para la barra */
+            max-height: 100%;
+            object-fit: contain;
+        }
         .navbar-nav .nav-link {
             padding: 10px 15px;
             color: white;
@@ -55,6 +60,14 @@
             position: relative;
             z-index: 2;
         }
+        
+        /* Ajuste de color para la sección de estatutos */
+        .container h2 {
+            color: white;
+        }
+        .container p {
+            color: white;
+        }
     </style>
 </head>
 <body>
@@ -62,7 +75,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center me-4" href="#">
+            <a class="navbar-brand d-flex align-items-center me-3" href="#">
                 <img src="{{ asset('images/logo_R.PNG') }}" alt="Logo de la Red de Investigadores">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
