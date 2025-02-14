@@ -7,6 +7,7 @@
     <title>Red de Investigadores</title>
     <!-- Agrega aquí tus estilos y scripts adicionales -->
     <style>
+        
         /* Fondo General con Opacidad */
         body {
             background: url("https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONT02AB929E13A1428C93AB343FCE3F5D47/native/utn-hero-banner.png") no-repeat center center fixed;
@@ -105,6 +106,26 @@
         .social-icons i:hover {
             transform: scale(1.1);
         }
+        @media (max-width: 991.98px) {
+    .navbar-collapse.show {
+        background-color: rgba(255, 255, 255, 1) !important; /* Fondo blanco sólido */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navbar-collapse.show .nav-link {
+        color: #000 !important; /* Enlaces en negro */
+    }
+
+    .navbar-collapse.show .nav-link:hover {
+        background-color: rgba(220, 0, 0, 0.8) !important; /* Fondo rojo al pasar */
+        color: #fff !important; /* Texto blanco al pasar */
+        border-radius: 5px;
+    }
+}
+
+
     </style>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -140,4 +161,5 @@
                 });
             });
         });
+        
 </script>

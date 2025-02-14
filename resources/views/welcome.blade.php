@@ -5,14 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Investigadores</title>
+    <style>
+    
 
     
-    
+
+    .navbar-nav .nav-link {
+        color: black !important;
+    }
+
+    .navbar-nav .nav-link:hover {
+        background-color: rgba(0,0,0,0.1) !important;
+        color: black !important;
+    }
+
+    .hero-overlay {
+        background: rgba(255, 255, 255, 0.6) !important;
+    }
+
+    .hero-content h1, .hero-content p {
+        color: black !important;
+    }
+</style>
+
 </head>
 
 <body>
 @extends('layouts.app')        
     
+    <div class="container my-5">
+        <div class="row text-center">
+        </div>
+    </div>
     <!-- Hero Section (Carrusel) -->
     <div id="heroCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
         <div class="carousel-indicators">
