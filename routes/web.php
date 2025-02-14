@@ -65,7 +65,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 // Ruta para cerrar sesión
 Route::post('/logout', function () {
     Auth::logout();
-    return redirect('/login');
+    return redirect('/');
 })->name('logout');
 
 // Ruta para mostrar el formulario de registro
