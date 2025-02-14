@@ -47,3 +47,7 @@ Route::get('/Investigacion_Areas', function () {
 Route::get('/login', function () {
     return view('auth.login');
 });
+//Eventos
+Route::get('/Eventos', function () {
+    return view('Eventos.Eventos');
+});
