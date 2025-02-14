@@ -38,7 +38,30 @@
 
                 <li class="nav-item"><a class="nav-link" href="/Eventos">Eventos</a></li>
                 <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
-                <li class="nav-item"><a class="nav-link btn btn-acceder px-3" href="/login">Acceder</a></li>
+
+                <!-- Mostrar "Acceder" solo si el usuario NO está autenticado -->
+                @guest
+                    <li class="nav-item"><a class="nav-link btn btn-acceder px-3" href="{{ route('login') }}">Acceder</a></li>
+                @else
+                    <!-- Mostrar nombre del usuario con un menú desplegable -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ Auth::user()->name }}
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                            <li><a class="dropdown-item" href="/profile">Mi Perfil</a></li>
+                            <li><a class="dropdown-item" href="/settings">Configuración</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li>
+                                <form method="POST" action="{{ route('logout') }}">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Cerrar Sesión</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+                @endguest
+
             </ul>
         </div>
     </div>
