@@ -8,52 +8,11 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .nav-tabs .nav-link {
-            font-weight: bold;
-            color: black;
-            border: none;
-            background: none;
-        }
-
-        .nav-tabs .nav-link.active {
-            color: red;
-            border-bottom: 3px solid red;
-        }
-
-        .table thead {
-            background-color: #666;
-            color: white;
-        }
-
-        .table th, .table td {
-            padding: 15px;
-            vertical-align: middle;
-        }
-
-        .date {
-            color: red;
-            font-weight: bold;
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 500px;
-        }
-
-        .video-container iframe {
-            width: 100%;
-            height: auto;
-        }
-    </style>
+    
 </head>
 <body>
 
+@extends('layouts.app')  
     <div class="container my-4">
         <h2 class="fw-bold">Divulgación Científica</h2>
 
