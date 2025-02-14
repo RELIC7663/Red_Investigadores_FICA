@@ -107,24 +107,41 @@
             transform: scale(1.1);
         }
         @media (max-width: 991.98px) {
-    .navbar-collapse.show {
-        background-color: rgba(255, 255, 255, 1) !important; /* Fondo blanco sólido */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
-        padding: 10px;
-        border-radius: 5px;
-    }
+            .navbar-collapse.show {
+                background-color: rgba(255, 255, 255, 1) !important; /* Fondo blanco sólido */
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+                padding: 10px;
+                border-radius: 5px;
+            }
 
-    .navbar-collapse.show .nav-link {
-        color: #000 !important; /* Enlaces en negro */
-    }
+            .navbar-collapse.show .nav-link {
+                color: #000 !important; /* Enlaces en negro */
+            }
 
-    .navbar-collapse.show .nav-link:hover {
-        background-color: rgba(220, 0, 0, 0.8) !important; /* Fondo rojo al pasar */
-        color: #fff !important; /* Texto blanco al pasar */
-        border-radius: 5px;
-    }
-}
+            .navbar-collapse.show .nav-link:hover {
+                background-color: rgba(220, 0, 0, 0.8) !important; /* Fondo rojo al pasar */
+                color: #fff !important; /* Texto blanco al pasar */
+                border-radius: 5px;
+            }
 
+            
+        }
+        .navbar-nav .nav-link {
+            color: black !important;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: rgba(0,0,0,0.1) !important;
+            color: black !important;
+        }
+
+        .hero-overlay {
+            background: rgba(255, 255, 255, 0.6) !important;
+        }
+
+        .hero-content h1, .hero-content p {
+            color: black !important;
+        }
 
     </style>
     <!-- Bootstrap CSS -->
