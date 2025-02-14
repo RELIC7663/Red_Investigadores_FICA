@@ -37,6 +37,7 @@
                 </li>
 
                 <li class="nav-item"><a class="nav-link" href="#">Eventos</a></li>
+                <li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li>
                 <li class="nav-item"><a class="nav-link btn btn-acceder px-3" href="#">Acceder</a></li>
             </ul>
         </div>
