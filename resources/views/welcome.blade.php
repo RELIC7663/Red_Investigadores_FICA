@@ -6,10 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Red Investigadores</title>
     <style>
-    
-
-    
-
     .navbar-nav .nav-link {
         color: black !important;
     }
@@ -26,7 +22,7 @@
     .hero-content h1, .hero-content p {
         color: black !important;
     }
-</style>
+    </style>
 
 </head>
 
