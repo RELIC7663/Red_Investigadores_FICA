@@ -7,20 +7,20 @@ Route::get('/', function () {
 });
 
 Route::get('/estatutos', function () {
-    return view('estatutos');
+    return view('Quienes_somos.estatutos');
 });
 
 Route::get('/objetivos', function () {
-    return view('objetivos');
+    return view('Quienes_somos.objetivos');
 });
 
 Route::get('/directiva', function () {
-    return view('directiva');
+    return view('Quienes_somos.directiva');
 });
 
 Route::get('/miembros', function () {
-    return view('miembros');
+    return view('Quienes_somos.miembros');
 });
 Route::get('/senescyt', function () {
-    return view('senescyt');
+    return view('Quienes_somos.senescyt');
 });
