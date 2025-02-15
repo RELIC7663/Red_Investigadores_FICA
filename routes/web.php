@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AreasInvestigacionController;
+use App\Http\Controllers\LineaInvestigacionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -43,6 +44,9 @@ Route::get('/Investigacion', function () {
     return view('Investigacion.Investigacion');
 });
 
+Route::resource('lineas', LineaInvestigacionController::class)
+->except(['show']); 
+    
 // Ruta para mostrar las áreas de investigación (vista y controlador)
 Route::get('/Investigacion_Areas', [AreasInvestigacionController::class, 'index']);
 Route::get('/areas', [AreasInvestigacionController::class, 'index'])->name('areas.index');

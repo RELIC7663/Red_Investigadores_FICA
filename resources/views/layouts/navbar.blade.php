@@ -32,7 +32,7 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="investigacionDropdown">
                         <li><a class="dropdown-item" href="/Investigacion_Areas">Áreas de Investigación</a></li>
-                        <li><a class="dropdown-item" href="/Investigacion">Líneas de Investigación</a></li>
+                        <li><a class="dropdown-item" href="{{ route('lineas.index') }}">Líneas de Investigación</a></li>
                     </ul>
                 </li>
 

@@ -1,108 +1,109 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Divulgación Científica</title>
+@extends('layouts.app')
 
-
-</head>
-<body>
-
-@extends('layouts.app')  
-    <div class="container my-4">
-        <h2 class="fw-bold">Divulgación Científica</h2>
-
-        <!-- Tabs para cambiar de año -->
-        <ul class="nav nav-tabs mt-3" id="yearTabs">
-            <li class="nav-item">
-                <a class="nav-link active" id="tab2023" data-bs-toggle="tab" href="#content2023">2023</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="tab2024" data-bs-toggle="tab" href="#content2024">2024</a>
-            </li>
-        </ul>
-
-        <div class="tab-content mt-4">
-            <!-- Contenido del 2023 -->
-            <div class="tab-pane fade show active" id="content2023">
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Autor</th>
-                                <th>Proyecto</th>
-                                <th>Entrevista</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="date">6/4/2023</td>
-                                <td>MSc. Jorge Gordón</td>
-                                <td>Técnicas de procesamiento automático aplicadas al análisis y predicción del consumo de drogas.</td>
-                                <td>
-                                    <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="date">20/4/2023</td>
-                                <td>MSc. Pedro Zambrano</td>
-                                <td>Trasplante de mitocondrias como nueva terapia para mejorar la regeneración de tejido en heridas.</td>
-                                <td>
-                                    <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Contenido del 2024 -->
-            <div class="tab-pane fade" id="content2024">
-                <div class="table-responsive">
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr>
-                                <th>Fecha</th>
-                                <th>Autor</th>
-                                <th>Proyecto</th>
-                                <th>Entrevista</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="date">12/3/2024</td>
-                                <td>MSc. Andrea López</td>
-                                <td>Uso de inteligencia artificial en la detección temprana de enfermedades cardiovasculares.</td>
-                                <td>
-                                    <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="date">25/5/2024</td>
-                                <td>Dr. Juan Pérez</td>
-                                <td>Avances en la nanotecnología para el tratamiento de cáncer.</td>
-                                <td>
-                                    <div class="video-container">
-                                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
-                                    </div>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-        </div>
+@section('content')
+<div class="container mt-5 pt-5">
+    <div class="d-flex justify-content-between align-items-center mb-5">
+        <h2 class="fw-bold mt-4 text-white">Líneas de Investigación</h2> <!-- Texto en blanco añadido -->
+        
+        @hasanyrole(['administrador', 'investigador'])
+        <a href="{{ route('lineas.create') }}" class="btn btn-success mt-4">
+            <i class="fas fa-plus fa-fw me-1"></i> Nueva Entrada
+        </a>
+        @endhasanyrole
     </div>
 
+    <ul class="nav nav-tabs" id="yearTabs">
+        @php
+            $years = $lineas->unique('anio')->pluck('anio')->sort();
+        @endphp
+        
+        @foreach($years as $index => $year)
+            <li class="nav-item">
+                <a class="nav-link {{ $index === 0 ? 'active' : '' }}" 
+                   id="tab{{ $year }}" 
+                   data-bs-toggle="tab" 
+                   href="#content{{ $year }}">
+                   {{ $year }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
 
-</body>
-</html>
+    <div class="tab-content mt-4">
+        @foreach($years as $index => $year)
+            <div class="tab-pane fade {{ $index === 0 ? 'show active' : '' }}" id="content{{ $year }}">
+                <div class="table-responsive">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Fecha</th>
+                                <th>Autor</th>
+                                <th>Proyecto</th>
+                                <th>Entrevista</th>
+                                @hasanyrole(['administrador', 'investigador']) 
+                                <th class="text-end">Acciones</th> 
+                                @endhasanyrole
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($lineas->where('anio', $year) as $linea)
+                            <tr>
+                                <td>{{ $linea->fecha->format('d/m/Y') }}</td>
+                                <td>{{ $linea->autor }}</td>
+                                <td>{{ $linea->proyecto }}</td>
+                                <td>
+                                    @if($linea->video_url)
+                                    <div class="ratio ratio-16x9">
+                                        <iframe src="{{ $linea->video_url }}" 
+                                                class="rounded" 
+                                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    @else
+                                    <span class="text-muted">Sin video</span>
+                                    @endif
+                                </td>
+                                @hasanyrole(['administrador', 'investigador'])
+                                <td class="text-end">
+                                    <div class="d-flex gap-2 justify-content-end flex-nowrap">
+                                        @role(['administrador', 'investigador'])
+                                        <a href="{{ route('lineas.edit', $linea->id) }}" 
+                                           class="btn btn-sm btn-warning d-flex align-items-center" 
+                                           style="min-width: 100px; padding: 0.25rem 0.5rem;"
+                                           title="Editar">
+                                            <i class="fas fa-edit fa-fw me-1"></i> Editar
+                                        </a>
+                                        @endrole
+                                        
+                                        @role('administrador')
+                                        <form action="{{ route('lineas.destroy', $linea->id) }}" 
+                                              method="POST" 
+                                              class="d-inline">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button type="submit" 
+                                                    class="btn btn-sm btn-danger d-flex align-items-center"
+                                                    style="min-width: 100px; padding: 0.25rem 0.5rem;"
+                                                    onclick="return confirm('¿Eliminar este registro permanentemente?')"
+                                                    title="Eliminar">
+                                                <i class="fas fa-trash fa-fw me-1"></i> Eliminar
+                                            </button>
+                                        </form>
+                                        @endrole
+                                    </div>
+                                </td>
+                                @endhasanyrole
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
+@endsection
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script> <!-- Reemplaza con tu kit real -->
