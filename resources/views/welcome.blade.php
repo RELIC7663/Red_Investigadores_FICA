@@ -48,7 +48,7 @@
                     </div>
                     
                     <div class="d-flex justify-content-center my-4">
-                        <img src="https://aenit.utn.edu.ec/2024/wp-content/uploads/2024/05/1.4-e1715742644411.jpg" alt="Logo RIPIS" class="me-2" style="max-height: 100px;" />
+                        <img src="https://aenit.utn.edu.ec/2024/wp-content/uploads/2024/05/1.4-e1715742644411.jpg" alt="Logo RIPIS" class="me-2" style="max-height: 200px;" />
                     </div>
                 </div>
             </div>
