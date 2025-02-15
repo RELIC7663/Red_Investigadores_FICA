@@ -7,17 +7,17 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Auth;
 
+// Ruta de bienvenida
 Route::get('/', function () {
     return view('welcome');
 });
 
-//contacto
+// Contacto
 Route::get('/contacto', function () {
     return view('contacto.contacto');
 });
 
-//Quienes Somos
-
+// Quienes Somos
 Route::get('/estatutos', function () {
     return view('Quienes_somos.estatutos');
 });
@@ -38,16 +38,12 @@ Route::get('/senescyt', function () {
     return view('Quienes_somos.senescyt');
 });
 
-//Investigación
-
+// Investigación
 Route::get('/Investigacion', function () {
     return view('Investigacion.Investigacion');
 });
 
-Route::get('/Investigacion_Areas', function () {
-    return view('Investigacion.AreasInvestigacion');
-});
-
+// Ruta para mostrar las áreas de investigación (vista y controlador)
 Route::get('/Investigacion_Areas', [AreasInvestigacionController::class, 'index']);
 Route::get('/areas', [AreasInvestigacionController::class, 'index'])->name('areas.index');
 Route::post('/areas', [AreasInvestigacionController::class, 'store'])->name('areas.store');
@@ -55,16 +51,12 @@ Route::get('/areas/{area}/edit', [AreasInvestigacionController::class, 'edit'])-
 Route::put('/areas/{area}', [AreasInvestigacionController::class, 'update'])->name('areas.update');
 Route::delete('/areas/{area}', [AreasInvestigacionController::class, 'destroy'])->name('areas.destroy');
 
-
-
-Route::get('/login', function () {
-    return view('auth.login');
-})->name('login');
-//Eventos
+// Eventos
 Route::get('/Eventos', function () {
     return view('Eventos.Eventos');
 });
 
+// Rutas de autenticación y registro
 Route::get('/login', function () {
     return view('auth.login');
 })->name('login');
@@ -84,10 +76,32 @@ Route::get('/register', function () {
 })->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
 
-// Ruta para mostrar el perfil del usuario (con autenticación)
+// Perfil y configuración (requieren autenticación)
 Route::get('/profile', [UserController::class, 'profile'])->name('profile')->middleware('auth');
-
-// Ruta para la configuración del usuario (con autenticación)
 Route::get('/settings', [UserController::class, 'settings'])->name('settings')->middleware('auth');
-
 Route::put('/profile/update', [UserController::class, 'update'])->name('update.profile')->middleware('auth');
+
+// Rutas de administración de usuarios (solo accesibles para administradores)
+// Rutas de administración de usuarios (solo accesibles para administradores)
+// Rutas de administración de usuarios (solo accesibles para administradores)
+Route::middleware(['auth', 'role:administrador'])->group(function () {
+    // Listado de usuarios
+    Route::get('/user', [UserController::class, 'index'])->name('user.index');
+    
+    // Crear nuevo usuario
+    Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
+    Route::post('/user', [UserController::class, 'store'])->name('user.store');
+    
+    // Editar usuario
+    Route::get('/user/{user}/edit', [UserController::class, 'edit'])->name('user.edit');
+    // Actualizar usuario (se usa updateAdmin para diferenciar del update del perfil)
+    Route::put('/user/{user}', [UserController::class, 'updateAdmin'])->name('user.update');
+    
+    // Eliminar usuario
+    Route::delete('/user/{user}', [UserController::class, 'destroy'])->name('user.destroy');
+    
+    // Asignar o quitar roles a un usuario (opcional, si se requiere una ruta separada)
+    Route::post('/user/{user}/roles', [UserController::class, 'assignRole'])->name('user.assignRole');
+});
+
+

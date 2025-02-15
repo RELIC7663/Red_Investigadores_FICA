@@ -8,14 +8,13 @@
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif
 
-    @auth
-    <!-- Botón para abrir modal de Agregar Área (solo para usuarios autenticados) -->
+    {{-- Mostrar botones de agregar, editar y eliminar solo si el usuario tiene rol de administrador o investigador --}}
+    @role(['administrador', 'investigador'])
     <button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#addAreaModal">
         Agregar Área
     </button>
-    @endauth
+    @endrole
 
-    <!-- Listado de Áreas -->
     <div class="row">
         @foreach($areas as $area)
             <div class="col-md-6 col-lg-4 mb-4">
@@ -23,8 +22,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $area->titulo }}</h5>
                         <p class="card-text">{{ $area->descripcion }}</p>
-                        @auth
-                        <!-- Botón para abrir modal de Editar -->
+                        @role(['administrador', 'investigador'])
                         <button class="btn btn-warning btn-sm" 
                                 data-bs-toggle="modal" 
                                 data-bs-target="#editAreaModal"
@@ -33,14 +31,15 @@
                                 data-descripcion="{{ $area->descripcion }}">
                             Editar
                         </button>
-                        <!-- Botón para abrir modal de Eliminar -->
+                        @endrole
+                        @role('administrador')
                         <button class="btn btn-danger btn-sm" 
                                 data-bs-toggle="modal" 
                                 data-bs-target="#deleteAreaModal"
                                 data-id="{{ $area->id }}">
                             Eliminar
                         </button>
-                        @endauth
+                        @endrole
                     </div>
                 </div>
             </div>
@@ -48,7 +47,8 @@
     </div>
 </div>
 
-@auth
+{{-- Los modales se incluirán dentro de un bloque @role para que sólo se muestren a usuarios con permisos --}}
+@role(['administrador', 'investigador'])
 <!-- Modal Agregar Área -->
 <div class="modal fade" id="addAreaModal" tabindex="-1" aria-labelledby="addAreaModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -77,7 +77,9 @@
     </div>
   </div>
 </div>
+@endrole
 
+@role(['administrador', 'investigador'])
 <!-- Modal Editar Área -->
 <div class="modal fade" id="editAreaModal" tabindex="-1" aria-labelledby="editAreaModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -107,7 +109,9 @@
     </div>
   </div>
 </div>
+@endrole
 
+@role('administrador')
 <!-- Modal Eliminar Área -->
 <div class="modal fade" id="deleteAreaModal" tabindex="-1" aria-labelledby="deleteAreaModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -130,34 +134,30 @@
     </div>
   </div>
 </div>
+@endrole
 
-<!-- Script para configurar los modales de Editar y Eliminar -->
 <script>
-  // Modal Editar: Se llena con los datos del área seleccionada
-  var editAreaModal = document.getElementById('editAreaModal')
+  // Configurar modal de edición: cargar datos del área seleccionada
+  var editAreaModal = document.getElementById('editAreaModal');
   editAreaModal.addEventListener('show.bs.modal', function (event) {
-    var button = event.relatedTarget
-    var id = button.getAttribute('data-id')
-    var titulo = button.getAttribute('data-titulo')
-    var descripcion = button.getAttribute('data-descripcion')
+    var button = event.relatedTarget;
+    var id = button.getAttribute('data-id');
+    var titulo = button.getAttribute('data-titulo');
+    var descripcion = button.getAttribute('data-descripcion');
 
-    editAreaModal.querySelector('#editTitulo').value = titulo
-    editAreaModal.querySelector('#editDescripcion').value = descripcion
+    editAreaModal.querySelector('#editTitulo').value = titulo;
+    editAreaModal.querySelector('#editDescripcion').value = descripcion;
 
-    var form = document.getElementById('editAreaForm')
-    form.action = '/areas/' + id
-  })
+    document.getElementById('editAreaForm').action = '/areas/' + id;
+  });
 
-  // Modal Eliminar: Configura la acción del formulario
-  var deleteAreaModal = document.getElementById('deleteAreaModal')
+  // Configurar modal de eliminación: asignar acción al formulario
+  var deleteAreaModal = document.getElementById('deleteAreaModal');
   deleteAreaModal.addEventListener('show.bs.modal', function (event) {
-    var button = event.relatedTarget
-    var id = button.getAttribute('data-id')
+    var button = event.relatedTarget;
+    var id = button.getAttribute('data-id');
 
-    var form = document.getElementById('deleteAreaForm')
-    form.action = '/areas/' + id
-  })
+    document.getElementById('deleteAreaForm').action = '/areas/' + id;
+  });
 </script>
-@endauth
-
 @endsection
