@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AreasInvestigacionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\LoginController;
@@ -46,6 +47,15 @@ Route::get('/Investigacion', function () {
 Route::get('/Investigacion_Areas', function () {
     return view('Investigacion.AreasInvestigacion');
 });
+
+Route::get('/Investigacion_Areas', [AreasInvestigacionController::class, 'index']);
+Route::get('/areas', [AreasInvestigacionController::class, 'index'])->name('areas.index');
+Route::post('/areas', [AreasInvestigacionController::class, 'store'])->name('areas.store');
+Route::get('/areas/{area}/edit', [AreasInvestigacionController::class, 'edit'])->name('areas.edit');
+Route::put('/areas/{area}', [AreasInvestigacionController::class, 'update'])->name('areas.update');
+Route::delete('/areas/{area}', [AreasInvestigacionController::class, 'destroy'])->name('areas.destroy');
+
+
 
 Route::get('/login', function () {
     return view('auth.login');
