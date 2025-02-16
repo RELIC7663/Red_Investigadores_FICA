@@ -87,43 +87,51 @@
 
         <h2 class="fw-bold mt-4 text-center">DEL COMITÉ DIRECTIVO</h2>
 
-        <div class="d-flex flex-wrap">
-            <div class="card m-2" style="width: 23%;">
-                <div class="card-body">
-                    <h3 class="card-title text-center">Presidente/a</h3>
-                    <ul>
-                        <li>Convocar y presidir reuniones.</li>
-                        <li>Representar oficialmente a la RIPIS.</li>
-                        <li>Impulsar proyectos y estrategias de la red.</li>
-                    </ul>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Presidente/a</h3>
+                        <ul>
+                            <li>Convocar y presidir reuniones.</li>
+                            <li>Representar oficialmente a la RIPIS.</li>
+                            <li>Impulsar proyectos y estrategias de la red.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card m-2" style="width: 23%;">
-                <div class="card-body">
-                    <h3 class="card-title text-center">Vicepresidente/a</h3>
-                    <ul>
-                        <li>Suplir al Presidente/a en caso de ausencia.</li>
-                        <li>Supervisar el cumplimiento de los objetivos de la RIPIS.</li>
-                    </ul>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Vicepresidente/a</h3>
+                        <ul>
+                            <li>Suplir al Presidente/a en caso de ausencia.</li>
+                            <li>Supervisar el cumplimiento de los objetivos de la RIPIS.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card m-2" style="width: 23%;">
-                <div class="card-body">
-                    <h3 class="card-title text-center">Vocales</h3>
-                    <ul>
-                        <li>Promover las actividades de la RIPIS.</li>
-                        <li>Reemplazar temporalmente a otros directivos si es necesario.</li>
-                    </ul>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Vocales</h3>
+                        <ul>
+                            <li>Promover las actividades de la RIPIS.</li>
+                            <li>Reemplazar temporalmente a otros directivos si es necesario.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="card m-2" style="width: 23%;">
-                <div class="card-body">
-                    <h3 class="card-title text-center">Secretaría</h3>
-                    <ul>
-                        <li>Redactar y custodiar actas de reuniones.</li>
-                        <li>Gestionar la documentación de la RIPIS.</li>
-                        <li>Supervisar el cumplimiento del estatuto.</li>
-                    </ul>
+            <div class="col-lg-3 col-md-6 col-sm-12">
+                <div class="card m-2">
+                    <div class="card-body">
+                        <h3 class="card-title text-center">Secretaría</h3>
+                        <ul>
+                            <li>Redactar y custodiar actas de reuniones.</li>
+                            <li>Gestionar la documentación de la RIPIS.</li>
+                            <li>Supervisar el cumplimiento del estatuto.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
