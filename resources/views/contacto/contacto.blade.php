@@ -161,7 +161,7 @@
                     </ul>
                 </div>
                 <div class="col-md-6 text-center">
-                    <img src="https://via.placeholder.com/400x250" alt="Imagen de contacto" class="img-fluid contact-img">
+                    <img src="images/logo_R.png" alt="Imagen de contacto" class="img-fluid contact-img">
                 </div>
             </div>
 
