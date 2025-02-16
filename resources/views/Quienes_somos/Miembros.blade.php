@@ -161,13 +161,13 @@
                             <div class="fondo-img">
                                 <img src="{{ $miembro['imagen'] }}" alt="Imagen de {{ $miembro['nombre'] }}">
                             </div>
-                            <h5 class="fw-bold">{{ $miembro['nombre'] }}</h5>
                             <div class="tarjeta-info">
+                            <h5 class="fw-bold">{{ $miembro['nombre'] }}</h5>
+                            
                                 <p><strong>Email:</strong> {{ $miembro['email'] }}</p>
                             </div>
-                            <a href="{{ $miembro['orcid'] }}" target="_blank" class="orcid-btn">
-                                {{ $miembro['orcid'] }}
-                            </a>
+                            <a href="{{ $miembro['orcid'] }}" target="_blank" class="orcid-btn">ORCID</a>
+
                         </div>
                     </div>
                 @endforeach
