@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
         <a class="navbar-brand d-flex align-items-center me-4" href="#">
-            <img src="{{ asset('images/logo_Recortado_2.PNG') }}" alt="Logo de la Red de Investigadores">
+            <img src="{{ asset('images/logo_Recortado_2.png') }}" alt="Logo de la Red de Investigadores">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
