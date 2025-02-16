@@ -41,7 +41,7 @@
                         [
                             'nombre' => 'PhD. Diego Ernesto Echeverría Jurado',
                             'email' => 'wresparza@utn.edu.ec',
-                            'imagen' =>
+                            'imagen' => 'https://software.utn.edu.ec/wp-content/uploads/2024/05/daisy.jpg',
                             'orcid' => 'https://orcid.org/0000-0003-0492-9979',
                         ],
                         [
@@ -65,43 +65,43 @@
                         [
                             'nombre' => 'PhD. Verónica Isolina Massón Fiallos',
                             'email' => 'vmasson@utn.edu.ec',
-                            'imagen' =>
-                                'https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/veronicamasson.jpg',
+                            'imagen' => 'https://software.utn.edu.ec/wp-content/uploads/2024/05/daisy.jpg',
+
                             'orcid' => 'https://orcid.org/0000-0003-1977-2118',
                         ],
                         [
                             'nombre' => 'PhD. Verónica Isolina Massón Fiallos',
                             'email' => 'vmasson@utn.edu.ec',
-                            'imagen' =>
-                                'https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/veronicamasson.jpg',
+                            'imagen' => 'https://software.utn.edu.ec/wp-content/uploads/2024/05/daisy.jpg',
+
                             'orcid' => 'https://orcid.org/0000-0003-1977-2118',
                         ],
                         [
                             'nombre' => 'PhD. Verónica Isolina Massón Fiallos',
                             'email' => 'vmasson@utn.edu.ec',
-                            'imagen' =>
-                                'https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/veronicamasson.jpg',
+                            'imagen' => 'https://software.utn.edu.ec/wp-content/uploads/2024/05/daisy.jpg',
+
                             'orcid' => 'https://orcid.org/0000-0003-1977-2118',
                         ],
                         [
                             'nombre' => 'PhD. Verónica Isolina Massón Fiallos',
                             'email' => 'vmasson@utn.edu.ec',
-                            'imagen' =>
-                                'https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/veronicamasson.jpg',
+                            'imagen' => 'https://software.utn.edu.ec/wp-content/uploads/2024/05/daisy.jpg',
+
                             'orcid' => 'https://orcid.org/0000-0003-1977-2118',
                         ],
                         [
                             'nombre' => 'PhD. Verónica Isolina Massón Fiallos',
                             'email' => 'vmasson@utn.edu.ec',
-                            'imagen' =>
-                                'https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/veronicamasson.jpg',
+                            'imagen' => 'https://software.utn.edu.ec/wp-content/uploads/2024/05/daisy.jpg',
+
                             'orcid' => 'https://orcid.org/0000-0003-1977-2118',
                         ],
                         [
                             'nombre' => 'PhD. Verónica Isolina Massón Fiallos',
                             'email' => 'vmasson@utn.edu.ec',
-                            'imagen' =>
-                                'https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/veronicamasson.jpg',
+                            'imagen' => 'https://software.utn.edu.ec/wp-content/uploads/2024/05/daisy.jpg',
+
                             'orcid' => 'https://orcid.org/0000-0003-1977-2118',
                         ],
                         [
@@ -160,7 +160,7 @@
                             'imagen' =>
                                 'https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/veronicamasson.jpg',
                             'orcid' => 'https://orcid.org/0000-0003-1977-2118',
-                        ],
+                        ]
                     ];
                 @endphp
 
