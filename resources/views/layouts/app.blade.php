@@ -143,6 +143,107 @@
             color: black !important;
         }
 
+
+        /*Estilos miembros.blade.php */
+        
+    /* Tarjeta de Miembro */    
+.tarjeta-miembro {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+/* Fondo gris para la imagen */
+.fondo-img {
+    background-color: #d3d3d3; /* Color gris */
+    border-radius: 15px; /* Bordes redondeados */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto;
+}
+
+/* Imagen de perfil completamente redonda */
+.fondo-img img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 5px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse */
+}
+
+
+/* Información dentro de la tarjeta */
+.tarjeta-miembro h5 {
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    
+}
+
+.tarjeta-info {
+    margin-top: 10px;
+    text-align: left;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.tarjeta-info p {
+    margin: 0;
+}
+
+.tarjeta-info strong {
+    font-weight: bold;
+}
+
+/* Botón de ORCID */
+.orcid-btn {
+    display: block;
+    margin-top: 15px;
+    padding: 8px;
+    background: #d8d8d8;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+.orcid-btn:hover {
+    background: #bbb;
+}
+
+/* Fondo con desenfoque */
+.fondo-miembros {
+    background: url('https://www.utn.edu.ec/wp-content/uploads/2022/06/campus-utn.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    padding: 50px 0;
+    
+}
+
+.fondo-miembros::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+
     </style>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
