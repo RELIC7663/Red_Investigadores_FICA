@@ -30,7 +30,7 @@
                     <p class="lead">Impulsar la investigación en ingeniería sostenible, promoviendo políticas públicas y colaboraciones estratégicas.</p>
                 </div>
                 <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                    <img src="https://www.utn.edu.ec/wp-content/uploads/2022/06/campus-utn.jpg" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
+                    <img src="{{ asset('images/fotos_objetivos/foto_01.jpg') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
                 </div>
             </div>
         </div>
@@ -43,7 +43,7 @@
                     <p class="lead">Crear alianzas con instituciones académicas, ONGs y sectores productivos a nivel global.</p>
                 </div>
                 <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                    <img src="https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONT02AB929E13A1428C93AB343FCE3F5D47/native/utn-hero-banner.png" alt="Colaboración Internacional" style="max-height: 250px; border-radius: 10px;">
+                    <img src="{{ asset('images/fotos_objetivos/foto_02.png') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
                 </div>
             </div>
         </div>
@@ -56,7 +56,7 @@
                     <p class="lead">Garantizar la integración de los miembros en reuniones, debates y proyectos clave.</p>
                 </div>
                 <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                    <img src="https://www.utn.edu.ec/wp-content/uploads/2022/06/campus-utn.jpg" alt="Participación Activa" style="max-height: 250px; border-radius: 10px;">
+                    <img src="{{ asset('images/fotos_objetivos/foto_03.jpg') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
                     <p class="lead">Apoyar el desarrollo de investigaciones alineadas con los objetivos de sostenibilidad y desarrollo social.</p>
                 </div>
                 <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                    <img src="https://www.utn.edu.ec/wp-content/uploads/2022/06/campus-utn.jpg" alt="Generación de Proyectos" style="max-height: 250px; border-radius: 10px;">
+                    <img src="{{ asset('images/fotos_objetivos/foto_01.jpg') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
                 </div>
             </div>
         </div>
@@ -82,7 +82,7 @@
                     <p class="lead">Proponer políticas públicas para fortalecer la investigación en procesos sostenibles.</p>
                 </div>
                 <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                    <img src="https://www.utn.edu.ec/wp-content/uploads/2022/06/campus-utn.jpg" alt="Desarrollo de Políticas" style="max-height: 250px; border-radius: 10px;">
+                    <img src="{{ asset('images/fotos_objetivos/foto_04.jpg') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
                     <p class="lead">Asegurar transparencia y ética en las investigaciones promovidas por la RIPIS.</p>
                 </div>
                 <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                    <img src="https://www.utn.edu.ec/wp-content/uploads/2022/06/campus-utn.jpg" alt="Inclusión y Ética" style="max-height: 250px; border-radius: 10px;">
+                    <img src="{{ asset('images/fotos_objetivos/foto_01.jpg') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
                 </div>
             </div>
         </div>
