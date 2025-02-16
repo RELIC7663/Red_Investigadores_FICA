@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AreasInvestigacionController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\LineaInvestigacionController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
@@ -22,6 +23,7 @@ Route::get('/contacto', function () {
 Route::get('/estatutos', function () {
     return view('Quienes_somos.estatutos');
 });
+Route::post('/contacto', [ContactController::class, 'submit'])->name('contact.submit');
     
 Route::get('/objetivos', function () {
     return view('Quienes_somos.objetivos');

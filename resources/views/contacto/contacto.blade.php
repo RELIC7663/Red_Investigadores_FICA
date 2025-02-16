@@ -84,7 +84,8 @@
             padding: 10px;
             border-radius: 8px;
             font-size: 0.9rem;
-            width: 200px; /* Ajuste del tamaño */
+            width: 200px;
+            /* Ajuste del tamaño */
             text-transform: uppercase;
             letter-spacing: 1px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -137,6 +138,29 @@
             font-size: 1.2rem;
         }
 
+        .alert {
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .spinner-border-sm {
+            vertical-align: middle;
+            margin-left: 8px;
+        }
     </style>
 </head>
 
@@ -155,7 +179,7 @@
                     <ul class="contact-info">
                         <li><i class="bi bi-envelope"></i> <strong>Email:</strong> contacto@redinvestigadores.org</li>
                         <li><i class="bi bi-telephone"></i> <strong>Teléfono:</strong> +593 123 456 789</li>
-                        <li class="address"><i class="bi bi-geo-alt"></i> <strong>Dirección:</strong> 
+                        <li class="address"><i class="bi bi-geo-alt"></i> <strong>Dirección:</strong>
                             <span>Av. 17 de julio, 5-21 y Gral. José María Cordova, Ibarra, Ecuador</span>
                         </li>
                     </ul>
@@ -168,18 +192,19 @@
             <!-- Formulario de Contacto -->
             <div class="mt-5">
                 <h4 class="contact-header">Envíanos un Mensaje</h4>
-                <form id="contactForm">
+                <form id="contactForm" method="POST" action="{{ route('contact.submit') }}">
+                    @csrf
                     <div class="mb-3">
                         <label for="name" class="form-label">Nombre Completo</label>
-                        <input type="text" class="form-control" id="name" required>
+                        <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="mb-3">
                         <label for="email" class="form-label">Correo Electrónico</label>
-                        <input type="email" class="form-control" id="email" required>
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="mb-3">
                         <label for="message" class="form-label">Mensaje</label>
-                        <textarea class="form-control auto-expand" id="message" rows="2" required oninput="autoExpand(this)"></textarea>
+                        <textarea class="form-control auto-expand" id="message" name="message" rows="2" required></textarea>
                     </div>
 
                     <!-- Botón centrado -->
@@ -199,11 +224,75 @@
 
     <!-- Bootstrap JS -->
     <script>
+        // Auto-expand textarea
         function autoExpand(element) {
             element.style.height = 'auto';
             element.style.height = (element.scrollHeight) + 'px';
         }
+
+        // Inicializar textarea al cargar
+        document.addEventListener('DOMContentLoaded', function() {
+            const textarea = document.getElementById('message');
+            autoExpand(textarea);
+        });
+
+        // Manejar envío del formulario
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+
+            // Deshabilitar botón y mostrar carga
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Enviando... <span class="spinner-border spinner-border-sm" role="status"></span>';
+
+            fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json',
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => {
+                    if (!response.ok) throw new Error('Error en la respuesta');
+                    return response.json();
+                })
+                .then(data => {
+                    if (data.success) {
+                        // Mostrar mensaje de éxito
+                        const alertDiv = document.createElement('div');
+                        alertDiv.className = 'alert alert-success mt-3';
+                        alertDiv.textContent = data.message;
+                        form.parentNode.insertBefore(alertDiv, form.nextSibling);
+
+                        form.reset();
+
+                        // Ocultar mensaje después de 5 segundos
+                        setTimeout(() => alertDiv.remove(), 5000);
+                    } else {
+                        throw new Error(data.message || 'Error desconocido');
+                    }
+                })
+                .catch(error => {
+                    const alertDiv = document.createElement('div');
+                    alertDiv.className = 'alert alert-danger mt-3';
+                    alertDiv.textContent = error.message;
+                    form.parentNode.insertBefore(alertDiv, form.nextSibling);
+
+                    // Ocultar mensaje después de 5 segundos
+                    setTimeout(() => alertDiv.remove(), 5000);
+                })
+                .finally(() => {
+                    // Restaurar botón
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = 'Enviar Mensaje';
+                });
+        });
     </script>
 
 </body>
+
 </html>
