@@ -21,24 +21,24 @@ Route::get('/contacto', function () {
 
 // Quienes Somos
 Route::get('/estatutos', function () {
-    return view('Quienes_somos.estatutos');
+    return view('Quienes_somos.Estatutos');
 });
 Route::post('/contacto', [ContactController::class, 'submit'])->name('contact.submit');
     
 Route::get('/objetivos', function () {
-    return view('Quienes_somos.objetivos');
+    return view('Quienes_somos.Objetivos');
 });
 
 Route::get('/directiva', function () {
-    return view('Quienes_somos.directiva');
+    return view('Quienes_somos.Directiva');
 });
 
 Route::get('/miembros', function () {
-    return view('Quienes_somos.miembros');
+    return view('Quienes_somos.Miembros');
 });
 
 Route::get('/senescyt', function () {
-    return view('Quienes_somos.senescyt');
+    return view('Quienes_somos.Senescyt');
 });
 
 // Investigación
