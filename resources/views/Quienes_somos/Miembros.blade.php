@@ -17,14 +17,7 @@
     @extends('layouts.app')
 
     <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="display-4 fw-bold">Miembros</h1>
-            <p class="lead">Nuestra red está compuesta por diversos miembros comprometidos con la investigación
-                sostenible.</p>
-        </div>
-    </div>
+
 
     <!-- Sección de Miembros (DENTRO DEL FONDO NEGRO) -->
     <div class="fondo-miembros">
@@ -175,6 +168,8 @@
             </div>
         </div>
     </div>
+
+    
 
 
 </body>

@@ -92,23 +92,127 @@
     </div>
 
 
-    <!-- Sección de Redes Sociales -->
-    <div class="container my-5">
-        <div class="row text-center">
-            <div class="col-md-4 social-icons">
-                <a href="https://www.facebook.com/" target="_blank" class="text-primary">
-                    <i class="bi bi-facebook"></i></a>
+    <div>
+
+    </div>
+
+    <div class="container mt-5">
+        <div class="bg-white p-4 rounded shadow-sm">
+            <h2 class="fw-bold mt-4 text-center">Red Internacional de Investigación en Procesos de Ingeniería Sostenible. [RIPIS]
+            </h2>
+
+
+            <div class="container mt-5">
+                <div class="row align-items-center">
+                    <!-- Columna de la imagen -->
+                    <div class="col-md-6 text-center">
+                        <img src="https://aenit.utn.edu.ec/2024/wp-content/uploads/2024/05/1.1.jpg" alt="Investigación Sostenible" class="img-fluid rounded">
+                    </div>
+
+                    <!-- Columna de los títulos y lista -->
+                    <div class="col-md-6">
+
+                        <h3 class="ms-3">Líneas de Investigación:</h3>
+                        <ul class="m-4">
+                            <li class="mt-3" style="text-align: justify;">La Red Internacional de Investigación en Procesos de Ingeniería Sostenible (RIPIS) es una iniciativa que busca fomentar la investigación colaborativa en ingeniería sostenible, integrando a investigadores, académicos y profesionales de diversas disciplinas. Su propósito es desarrollar soluciones innovadoras en sectores clave como la producción industrial, agropecuaria, biotecnología, energía y seguridad alimentaria.
+
+                                Facilitar la colaboración entre instituciones para abordar desafíos en sostenibilidad.
+                                Impulsar la innovación en procesos industriales y tecnológicos sostenibles.
+                                Contribuir a la creación de ciudades más seguras y sostenibles.
+                                Transferir conocimientos y tecnologías al sector productivo y a políticas públicas.
+                                Potenciar la formación de investigadores y fortalecer grupos de investigación.
+                                Promover prácticas que contribuyan al desarrollo socioeconómico y la conservación ambiental.</li>
+
+                        </ul>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 social-icons">
-                <a href="https://www.instagram.com/" target="_blank" class="text-danger">
-                    <i class="bi bi-instagram"></i></a>
+
+
+            <div class="container mt-5">
+                <div class="row align-items-center">
+                    <!-- Columna de la imagen -->
+
+
+                    <!-- Columna de los títulos y lista -->
+                    <div class="col-md-6">
+
+                        <h3 class="ms-3">Miembros de la Red</h3>
+                        <ul class="m-4">
+                            <li class="mt-3" style="text-align: justify;">La RIPIS está compuesta por investigadores, instituciones educativas, ONGs, asociaciones y entidades públicas y privadas. Se identifican tres categorías de miembros: Fundadores, Activos, Honorarios
+                                Los miembros deben cumplir con las normativas, participar activamente en las reuniones y presentar proyectos de investigación.</li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <img src="REDU.png" alt="Investigación Sostenible" class="img-fluid rounded">
+                    </div>
+                </div>
             </div>
-            <div class="col-md-4 social-icons">
-                <a href="https://www.linkedin.com" target="_blank" class="text-info">
-                    <i class="bi bi-linkedin"></i></a>
+
+
+            <div class="container mt-5">
+                <div class="row align-items-center">
+                    <!-- Columna de la imagen -->
+                    <div class="col-md-6 text-center">
+                        <img src="images/logo_R.png" alt="Investigación Sostenible" class="img-fluid rounded">
+                    </div>
+
+                    <!-- Columna de los títulos y lista -->
+                    <div class="col-md-6">
+
+                        <h3 class="ms-3">Líneas de Investigación:</h3>
+                        <ul class="m-4">
+                            <li class="mt-3">Producción Industrial y Tecnológica Sostenible.</li>
+                            <li class="mt-3">Desarrollo Agropecuario y Forestal Sostenible.</li>
+                            <li class="mt-3">Biotecnología, Energía y Recursos Naturales Renovables.</li>
+                            <li class="mt-3">Soberanía, Seguridad e Inocuidad Alimentaria Sustentable.</li>
+                            <li class="mt-3">Gestión, Producción, Productividad, Innovación y Desarrollo Socioeconómico.</li>
+                            <li class="mt-3">Desarrollo, Aplicación de Software y Ciberseguridad.</li>
+                            <li class="mt-3">Educación y Capacitación en Ingeniería Circular y Sostenible.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+
+            <!-- Sección de Redes Sociales -->
+            <div class="container my-5">
+                <div class="row text-center">
+
+
+
+                    <h2 class="fw-bold mt-4 text-center">
+                    </h2>
+
+                    <div class="col-md-4 social-icons">
+                        <h2 class="fw-bold mt-4 text-center">Facebook
+                        </h2>
+                        <a href="https://www.facebook.com/" target="_blank" class="text-primary">
+                            <i class="bi bi-facebook"></i></a>
+                    </div>
+                    <div class="col-md-4 social-icons">
+                        <h2 class="fw-bold mt-4 text-center">instagram
+                        </h2>
+                        <a href="https://www.instagram.com/" target="_blank" class="text-danger">
+                            <i class="bi bi-instagram"></i></a>
+                    </div>
+                    <div class="col-md-4 social-icons">
+                        <h2 class="fw-bold mt-4 text-center">Linkedin
+                        </h2>
+                        <a href="https://www.linkedin.com" target="_blank" class="text-info">
+                            <i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
+
+
+
+
+
 
 
 

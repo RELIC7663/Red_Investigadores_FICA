@@ -14,15 +14,8 @@
     <!-- Navbar -->
     @extends('layouts.app')
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="display-4 fw-bold">Directiva</h1>
-            <p class="lead">Conozca a los miembros de nuestra directiva que lideran las iniciativas de la red.</p>
-        </div>
-    </div>
-    
+
+
 
     
     <div class = "directivas-container">
