@@ -23,7 +23,8 @@
                     <div>
                     <h1 class="display-4 fw-bold">Congreso Internacional AENIT 2024</h1>
                     <p class="lead">El evento se llevará a cabo los días 19, 20 y 21 de junio de 2024 en la Universidad Técnica del Norte, Ibarra-Ecuador. Un espacio de diálogo e intercambio tecnológico con la participación de investigadores y profesionales.</p>
-                    </div>
+                    <a href="https://aenit.utn.edu.ec/2024/" target="_blank">Más información</a>
+                </div>
                     
                 </div>
                 <div class="d-flex justify-content-center my-4 bg-white p-2 rounded" style="z-index: 2; position: relative;">
@@ -40,6 +41,7 @@
                 <div class="hero-content">
                     <h1 class="display-4 fw-bold">Congreso Internacional AENIT 2023</h1>
                     <p class="lead">Celebrado en 2023, el congreso reunió a destacados profesionales e investigadores de diversas áreas tecnológicas para compartir avances y experiencias.</p>
+                    <a href="https://aenit.utn.edu.ec/" target="_blank">Más información</a>
                 </div>
                 
             </div>
