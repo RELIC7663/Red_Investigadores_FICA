@@ -12,12 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('lineas_investigacion', function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->id();
-            $table->string('autor');
-            $table->text('proyecto');
-            $table->date('fecha');
-            $table->string('video_url')->nullable();
-            $table->integer('anio');
+            $table->string('nombre');
+            $table->text('descripcion');
+            $table->unsignedBigInteger('area_investigacion_id');
+            $table->foreign('area_investigacion_id')
+                  ->references('id')->on('areas_investigacion')
+                  ->onDelete('cascade');
             $table->timestamps();
         });
     }

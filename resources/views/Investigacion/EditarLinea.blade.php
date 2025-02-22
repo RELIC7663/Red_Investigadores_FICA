@@ -3,34 +3,30 @@
 @section('content')
 <div class="container">
     <h2 class="mb-4">Editar Línea de Investigación</h2>
-
     <form action="{{ route('lineas.update', $linea->id) }}" method="POST">
         @csrf
         @method('PUT')
 
         <div class="mb-3">
-            <label class="form-label">Autor</label>
-            <input type="text" name="autor" class="form-control" value="{{ $linea->autor }}" required>
+            <label class="form-label">Nombre</label>
+            <input type="text" name="nombre" class="form-control" value="{{ $linea->nombre }}" required>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Proyecto</label>
-            <input type="text" name="proyecto" class="form-control" value="{{ $linea->proyecto }}" required>
+            <label class="form-label">Descripción</label>
+            <textarea name="descripcion" class="form-control" required>{{ $linea->descripcion }}</textarea>
         </div>
 
         <div class="mb-3">
-            <label class="form-label">Fecha</label>
-            <input type="date" name="fecha" class="form-control" value="{{ $linea->fecha->format('Y-m-d') }}" required>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">Año</label>
-            <input type="number" name="anio" class="form-control" value="{{ $linea->anio }}" required>
-        </div>
-
-        <div class="mb-3">
-            <label class="form-label">URL del Video (opcional)</label>
-            <input type="url" name="video_url" class="form-control" value="{{ $linea->video_url }}">
+            <label class="form-label">Área de Investigación</label>
+            <select name="area_investigacion_id" class="form-control" required>
+                <option value="">Selecciona un área</option>
+                @foreach($areas as $area)
+                    <option value="{{ $area->id }}" @if($linea->area_investigacion_id == $area->id) selected @endif>
+                        {{ $area->nombre }}
+                    </option>
+                @endforeach
+            </select>
         </div>
 
         <button type="submit" class="btn btn-warning">Actualizar</button>

@@ -8,8 +8,8 @@
         @method('PUT')
 
         <div class="mb-3">
-            <label for="titulo" class="form-label">Título</label>
-            <input type="text" name="titulo" id="titulo" class="form-control" value="{{ $area->titulo }}" required>
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" name="nombre" id="nombre" class="form-control" value="{{ $area->nombre }}" required>
         </div>
         <div class="mb-3">
             <label for="descripcion" class="form-label">Descripción</label>

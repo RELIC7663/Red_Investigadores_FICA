@@ -2,12 +2,9 @@
 
 @section('content')
 <div>
-
     @if(session('success'))
     <div class="alert alert-success text-center mb-4">{{ session('success') }}</div>
     @endif
-
-    {{-- Mostrar botones de agregar, editar y eliminar solo si el usuario tiene rol de administrador o investigador --}}
 
     <div class="bg-white m-5 p-4 rounded shadow-sm">
         <h2 class="text-center mb-4">Áreas de Investigación</h2>
@@ -23,9 +20,7 @@
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card shadow-sm border-light rounded-3">
                     <div class="card-body">
-
-
-                        <h5 class="card-title text-primary">{{ $area->titulo }}</h5>
+                        <h5 class="card-title text-primary">{{ $area->nombre }}</h5>
                         <p class="card-text">{{ $area->descripcion }}</p>
                         <div class="d-flex justify-content-start gap-2">
                             @role(['administrador', 'investigador'])
@@ -33,7 +28,7 @@
                                 data-bs-toggle="modal"
                                 data-bs-target="#editAreaModal"
                                 data-id="{{ $area->id }}"
-                                data-titulo="{{ $area->titulo }}"
+                                data-nombre="{{ $area->nombre }}"
                                 data-descripcion="{{ $area->descripcion }}">
                                 <i class="bi bi-pencil-square"></i> Editar
                             </button>
@@ -53,11 +48,8 @@
             @endforeach
         </div>
     </div>
-
 </div>
 
-
-{{-- Los modales se incluirán dentro de un bloque @role para que sólo se muestren a usuarios con permisos --}}
 @role(['administrador', 'investigador'])
 <!-- Modal Agregar Área -->
 <div class="modal fade" id="addAreaModal" tabindex="-1" aria-labelledby="addAreaModalLabel" aria-hidden="true">
@@ -71,8 +63,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="titulo" class="form-label">Título</label>
-                        <input type="text" class="form-control" name="titulo" required>
+                        <label for="nombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" required>
                     </div>
                     <div class="mb-3">
                         <label for="descripcion" class="form-label">Descripción</label>
@@ -103,8 +95,8 @@
                 </div>
                 <div class="modal-body">
                     <div class="mb-3">
-                        <label for="editTitulo" class="form-label">Título</label>
-                        <input type="text" class="form-control" name="titulo" id="editTitulo" required>
+                        <label for="editNombre" class="form-label">Nombre</label>
+                        <input type="text" class="form-control" name="nombre" id="editNombre" required>
                     </div>
                     <div class="mb-3">
                         <label for="editDescripcion" class="form-label">Descripción</label>
@@ -152,10 +144,10 @@
     editAreaModal.addEventListener('show.bs.modal', function(event) {
         var button = event.relatedTarget;
         var id = button.getAttribute('data-id');
-        var titulo = button.getAttribute('data-titulo');
+        var nombre = button.getAttribute('data-nombre');
         var descripcion = button.getAttribute('data-descripcion');
 
-        editAreaModal.querySelector('#editTitulo').value = titulo;
+        editAreaModal.querySelector('#editNombre').value = nombre;
         editAreaModal.querySelector('#editDescripcion').value = descripcion;
 
         document.getElementById('editAreaForm').action = '/areas/' + id;

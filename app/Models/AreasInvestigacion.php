@@ -9,10 +9,16 @@ class AreasInvestigacion extends Model
 {
     use HasFactory;
 
-    protected $table = 'areas_investigacion'; // Especificar nombre de tabla
+    protected $table = 'areas_investigacion';
     
     protected $fillable = [
-        'titulo',
+        'nombre',
         'descripcion'
     ];
+
+    // Relación: un área tiene muchas líneas de investigación
+    public function lineasInvestigacion()
+    {
+        return $this->hasMany(LineaInvestigacion::class, 'area_investigacion_id');
+    }
 }

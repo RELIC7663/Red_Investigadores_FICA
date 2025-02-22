@@ -16,7 +16,7 @@ class AreasInvestigacionController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'titulo' => 'required|string|max:255',
+            'nombre' => 'required|string|max:255',
             'descripcion' => 'required|string',
         ]);
 
@@ -32,7 +32,7 @@ class AreasInvestigacionController extends Controller
     public function update(Request $request, AreasInvestigacion $area)
     {
         $request->validate([
-            'titulo' => 'required|string|max:255',
+            'nombre' => 'required|string|max:255',
             'descripcion' => 'required|string',
         ]);
 

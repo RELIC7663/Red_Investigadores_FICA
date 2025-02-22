@@ -8,17 +8,18 @@ use Illuminate\Database\Eloquent\Model;
 class LineaInvestigacion extends Model
 {
     use HasFactory;
+    
     protected $table = 'lineas_investigacion';
 
-    protected $casts = [
-        'fecha' => 'date', 
+    protected $fillable = [
+        'nombre',
+        'descripcion',
+        'area_investigacion_id'
     ];
 
-    protected $fillable = [
-        'autor',
-        'proyecto',
-        'fecha',
-        'video_url',
-        'anio'
-    ];
+    // Relación: una línea de investigación pertenece a un área de investigación
+    public function areaInvestigacion()
+    {
+        return $this->belongsTo(AreasInvestigacion::class, 'area_investigacion_id');
+    }
 }

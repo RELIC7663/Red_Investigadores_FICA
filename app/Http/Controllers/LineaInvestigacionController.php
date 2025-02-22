@@ -4,68 +4,61 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\LineaInvestigacion;
+use App\Models\AreasInvestigacion;
 
 class LineaInvestigacionController extends Controller
 {
-    // Mostrar todas las líneas de investigación
+    // Mostrar todas las líneas de investigación con su área correspondiente
     public function index()
     {
-        $lineas = LineaInvestigacion::orderBy('fecha', 'desc')->get();
-        
-        // Generar lista de años únicos
-        $years = $lineas->unique('anio') // Filtra registros únicos por año
-                      ->pluck('anio')    // Obtiene solo los valores de 'anio'
-                      ->sort();          // Ordena los años
-    
-        return view('Investigacion.Investigacion', compact('lineas', 'years'));
+        $lineas = LineaInvestigacion::with('areaInvestigacion')->orderBy('nombre', 'asc')->get();
+        return view('Investigacion.Investigacion', compact('lineas'));
     }
 
-    // Mostrar formulario de creación
+    // Mostrar formulario de creación, incluyendo las áreas disponibles
     public function create()
     {
-        return view('Investigacion.CrearLinea');
+        $areas = AreasInvestigacion::all();
+        return view('Investigacion.CrearLinea', compact('areas'));
     }
 
     // Almacenar nueva línea de investigación
     public function store(Request $request)
     {
         $request->validate([
-            'autor' => 'required|string|max:255',
-            'proyecto' => 'required|string',
-            'fecha' => 'required|date',
-            'video_url' => 'nullable|url',
-            'anio' => 'required|integer|min:2000|max:2100'
+            'nombre' => 'required|string|max:255',
+            'descripcion' => 'required|string',
+            'area_investigacion_id' => 'required|exists:areas_investigacion,id'
         ]);
 
         LineaInvestigacion::create($request->all());
-        return redirect()->route('lineas.index')->with('success', 'Registro creado exitosamente');
+        return redirect()->route('lineas.index')->with('success', 'Línea de investigación creada exitosamente.');
     }
 
-    // Mostrar formulario de edición
+    // Mostrar formulario de edición, incluyendo las áreas disponibles
     public function edit(LineaInvestigacion $linea)
     {
-        return view('Investigacion.EditarLinea', compact('linea'));
+        $areas = AreasInvestigacion::all();
+        return view('Investigacion.EditarLinea', compact('linea', 'areas'));
     }
 
     // Actualizar línea de investigación
     public function update(Request $request, LineaInvestigacion $linea)
     {
         $request->validate([
-            'autor' => 'required|string|max:255',
-            'proyecto' => 'required|string',
-            'fecha' => 'required|date',
-            'video_url' => 'nullable|url',
-            'anio' => 'required|integer|min:2000|max:2100'
+            'nombre' => 'required|string|max:255',
+            'descripcion' => 'required|string',
+            'area_investigacion_id' => 'required|exists:areas_investigacion,id'
         ]);
 
         $linea->update($request->all());
-        return redirect()->route('lineas.index')->with('success', 'Registro actualizado correctamente');
+        return redirect()->route('lineas.index')->with('success', 'Línea de investigación actualizada correctamente.');
     }
 
     // Eliminar línea de investigación
     public function destroy(LineaInvestigacion $linea)
     {
         $linea->delete();
-        return redirect()->route('lineas.index')->with('success', 'Registro eliminado permanentemente');
+        return redirect()->route('lineas.index')->with('success', 'Línea de investigación eliminada correctamente.');
     }
 }
