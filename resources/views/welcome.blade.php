@@ -21,12 +21,6 @@
         /* Gris oscuro profesional */
         --light-gray: #F5F5F5;
     }
-
-    body {
-        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-            url("https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONT02AB929E13A1428C93AB343FCE3F5D47/native/utn-hero-banner.png") center/cover fixed;
-    }
-
     .display-4 {
         color: var(--primary-color);
     }

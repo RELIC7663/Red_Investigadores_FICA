@@ -12,7 +12,6 @@
     <style>
         /* Fondo General con Opacidad */
         body {
-            background: url("https://www.oracle.com/node/oce/storyhub/prod/api/v1.1/assets/CONT02AB929E13A1428C93AB343FCE3F5D47/native/utn-hero-banner.png") no-repeat center center fixed;
             background-size: cover;
             position: relative;
         }
@@ -24,8 +23,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.2);
-            /* Menos opaco */
+            background: linear-gradient(145deg, rgba(208, 255, 205, 0.98) 0%, rgba(109, 135, 247, 0.98) 100%);
             z-index: -1;
         }
 
