@@ -3,19 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Iniciar Sesión</title>
   <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    :root {
+      --primary-blue: #005A8B;
+      --accent-yellow: #FFC107;
+      --dark-gray: #2D2D2D;
+      --hover-blue: #004A73;
+    }
+
     body {
-      background: url('https://www.utn.edu.ec/wp-content/uploads/2021/06/planta-central-utn.png') no-repeat center center fixed;
-      background-size: cover;
+      background: linear-gradient(135deg, var(--primary-blue), var(--hover-blue));
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
+      margin: 0;
     }
+
     .login-container {
       background: rgba(255, 255, 255, 0.9);
       padding: 40px;
@@ -25,8 +33,9 @@
       width: 100%;
       text-align: center;
     }
+
     .btn-login {
-      background-color: #b00000;
+      background-color: var(--primary-blue);
       color: white;
       font-weight: bold;
       width: 100%;
@@ -34,23 +43,28 @@
       border-radius: 6px;
       transition: background 0.3s ease;
     }
+
     .btn-login:hover {
-      background-color: #8b0000;
+      background-color: var(--hover-blue);
     }
+
     .form-control {
       border-radius: 6px;
     }
+
     .form-label {
       font-weight: bold;
     }
+
     .forgot-password {
       font-size: 14px;
       text-decoration: none;
-      color: #b00000;
+      color: var(--primary-blue);
       transition: color 0.3s ease;
     }
+
     .forgot-password:hover {
-      color: #8b0000;
+      color: var(--hover-blue);
     }
   </style>
 </head>

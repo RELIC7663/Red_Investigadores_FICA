@@ -13,6 +13,7 @@
 
     <!-- Navbar -->
     @extends('layouts.app')
+    @section('content')
 
 
     <div class="hero">
@@ -90,6 +91,8 @@
             });
         });
     </script>
+
+    @endsection
 
 </body>
 

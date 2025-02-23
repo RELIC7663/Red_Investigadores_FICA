@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprobación Senescyt - Red Investigadores</title>
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
 </head>
+
 <body>
 
-@extends('layouts.app')  
+    @extends('layouts.app')
+    @section('content')
     <!-- Hero Section -->
     <div class="hero">
         <div class="hero-overlay"></div>
@@ -27,9 +30,7 @@
             </div>
         </div>
     </div>
-
-    
-
-    
+    @endsection
 </body>
+
 </html>

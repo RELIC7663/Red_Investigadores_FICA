@@ -167,7 +167,7 @@
 <body>
 
     @extends('layouts.app')
-
+    @section('content')
     <div class="container d-flex flex-column align-items-center">
         <div class="contact-section w-100">
             <h2 class="contact-header">Información de Contacto</h2>
@@ -292,7 +292,7 @@
                 });
         });
     </script>
-
+    @endsection
 </body>
 
 </html>
