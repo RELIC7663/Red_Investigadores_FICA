@@ -21,6 +21,7 @@
         /* Gris oscuro profesional */
         --light-gray: #F5F5F5;
     }
+
     .display-4 {
         color: var(--primary-color);
     }
@@ -62,7 +63,8 @@
     /* Estilo actualizado para el mapa */
     .map-container {
         width: 100%;
-        height: 500px; /* Altura aumentada */
+        height: 500px;
+        /* Altura aumentada */
         border-radius: 15px;
         overflow: hidden;
         margin: 40px 0;
@@ -79,7 +81,8 @@
 
     @media (max-width: 768px) {
         .map-container {
-            height: 350px; /* Altura para móviles */
+            height: 350px;
+            /* Altura para móviles */
             margin: 25px 0;
         }
     }
@@ -94,6 +97,32 @@
         background: #f8d7da;
         border-color: #e53935;
         color: #721c24;
+    }
+
+    .university-logos {
+        background-color: var(--light-gray);
+        border-radius: 15px;
+        padding: 30px;
+        margin: 40px 0;
+    }
+
+    .logo-item {
+        max-width: 150px;
+        height: auto;
+        transition: all 0.3s ease;
+        padding: 15px;
+    }
+
+    .logo-item:hover {
+        filter: grayscale(0%);
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .logo-item {
+            max-width: 100px;
+        }
     }
 </style>
 
@@ -168,6 +197,34 @@
                                 <button type="submit" class="btn-submit">Enviar Mensaje</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección de Logos Universitarios -->
+            <div class="university-logos mt-5 py-5">
+                <h2 class="text-center mb-5 fw-bold" style="color: var(--primary-color);">Instituciones Miembro</h2>
+                <div class="row justify-content-center align-items-center g-4">
+                    <div class="col-6 col-md-3 col-lg-2 text-center">
+                        <img src="{{ asset('images/logo_universidades/ESPOL_logo.png') }}" alt="ESPOL" class="img-fluid logo-item">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center">
+                        <img src="{{ asset('images/logo_universidades/ICESI_logo.png') }}" alt="ICESI" class="img-fluid logo-item">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center">
+                        <img src="{{ asset('images/logo_universidades/UTN_logo.png') }}" alt="UTN" class="img-fluid logo-item">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center">
+                        <img src="{{ asset('images/logo_universidades/LACNIC_logo.png') }}" alt="LACNIC" class="img-fluid logo-item">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center">
+                        <img src="{{ asset('images/logo_universidades/UEA_logo.png') }}" alt="UEA" class="img-fluid logo-item">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center">
+                        <img src="{{ asset('images/logo_universidades/UG_logo.png') }}" alt="UG" class="img-fluid logo-item">
+                    </div>
+                    <div class="col-6 col-md-3 col-lg-2 text-center">
+                        <img src="{{ asset('images/logo_universidades/UTM_logo.png') }}" alt="UTM" class="img-fluid logo-item">
                     </div>
                 </div>
             </div>
