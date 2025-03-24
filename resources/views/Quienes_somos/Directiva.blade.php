@@ -27,70 +27,68 @@
     <div class="directivas-container">
         <div class="container">
             <h1 class="titulo_H1">Directiva de la Red de Investigadores</h1>
-
-            <h2 class="titulo">Presidente</h2>
-            <div class="tarjeta-miembro">
-                <div class="fondo-img">
-                    <img src="https://software.utn.edu.ec/wp-content/uploads/2024/05/daisy.jpg" alt="Presidente">
-                </div>
-                <h5>Daisy Elizabeth Imbaquingo Esparza</h5>
-                <p>Email: deimbaquingo@utn.edu.ec</p>
-                <a href="https://orcid.org/0000-0002-6412-6257" class="orcid-btn" target="_blank">ORCID</a>
-            </div>
-
-            <h2 class="titulo">Vicepresidente</h2>
-            <div class="tarjeta-miembro">
-                <div class="fondo-img">
-                    <img src="{{ asset('images/foto_miembros/deej_miembro.png') }}" alt="Vicepresidente">
-                </div>
-                <h5>Diego Ernesto Echeverría Jurado</h5>
-                <p>Email: decheverria@cenace.gob.ec</p>
-                <a href="https://orcid.org/0000-0002-1743-9234" class="orcid-btn" target="_blank">ORCID</a>
-            </div>
-
-            <h2 class="titulo">Secretario</h2>
-            <div class="tarjeta-miembro">
-                <div class="fondo-img">
-                    <img src="https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/jeguerra.png" alt="Secretario">
-                </div>
-                <h5>Julio Esteban Guerra Massón</h5>
-                <p>Email: jeguerra@utn.edu.ec</p>
-                <a href="https://orcid.org/0000-0001-5278-719X" class="orcid-btn" target="_blank">ORCID</a>
-            </div>
-
-            <h2 class="titulo">Primer Vocal</h2>
-            <div class="tarjeta-miembro">
-                <div class="fondo-img">
-                    <img src="{{ asset('images/foto_miembros/hasa_miembro.png') }}" alt="Primer Vocal">
-                </div>
-                <h5>Hernán Adolfo Samaniego Armijos</h5>
-                <p>Email: xxxx@icesi.edu.co</p>
-                <a href="https://orcid.org/0000-0001-6161-7002" class="orcid-btn" target="_blank">ORCID</a>
-            </div>
-
-            <h2 class="titulo">Segundo Vocal</h2>
-            <div class="tarjeta-miembro">
-                <div class="fondo-img">
-                    <img src="{{ asset('images/foto_miembros/jjbm_miembro.png') }}" alt="Segundo Vocal">
-                </div>
-                <h5>Julio Joffre Barzola Monteses</h5>
-                <p>Email: julio.barzolam@ug.edu.ec</p>
-                <a href="https://orcid.org/0000-0003-2732-979X" class="orcid-btn" target="_blank">ORCID</a>
+    
+            @php
+                $directiva = [
+                    [
+                        'cargo' => 'Presidente',
+                        'nombre' => 'Daisy Elizabeth Imbaquingo Esparza',
+                        'email' => 'deimbaquingo@utn.edu.ec',
+                        'imagen' => 'https://software.utn.edu.ec/wp-content/uploads/2024/05/daisy.jpg',
+                        'orcid' => 'https://orcid.org/0000-0002-6412-6257',
+                    ],
+                    [
+                        'cargo' => 'Vicepresidente',
+                        'nombre' => 'Diego Ernesto Echeverría Jurado',
+                        'email' => 'decheverria@cenace.gob.ec',
+                        'imagen' => asset('images/foto_miembros/deej_miembro.png'),
+                        'orcid' => 'https://orcid.org/0000-0002-1743-9234',
+                    ],
+                    [
+                        'cargo' => 'Secretario',
+                        'nombre' => 'Julio Esteban Guerra Massón',
+                        'email' => 'jeguerra@utn.edu.ec',
+                        'imagen' => 'https://investigacion.utn.edu.ec/wp-content/uploads/2024/07/jeguerra.png',
+                        'orcid' => 'https://orcid.org/0000-0001-5278-719X',
+                    ],
+                    [
+                        'cargo' => 'Primer Vocal',
+                        'nombre' => 'Hernán Adolfo Samaniego Armijos',
+                        'email' => 'xxxx@icesi.edu.co',
+                        'imagen' => asset('images/foto_miembros/hasa_miembro.png'),
+                        'orcid' => 'https://orcid.org/0000-0001-6161-7002',
+                    ],
+                    [
+                        'cargo' => 'Segundo Vocal',
+                        'nombre' => 'Julio Joffre Barzola Monteses',
+                        'email' => 'julio.barzolam@ug.edu.ec',
+                        'imagen' => asset('images/foto_miembros/jjbm_miembro.png'),
+                        'orcid' => 'https://orcid.org/0000-0003-2732-979X',
+                    ],
+                ];
+            @endphp
+    
+            <div class="row justify-content-center">
+                @foreach($directiva as $miembro)
+                    <div class="col-md-8">
+                        <h2 class="titulo">{{ $miembro['cargo'] }}</h2>
+                        <div class="tarjeta-miembro-estetica">
+                            <div class="foto-miembro">
+                                <img src="{{ $miembro['imagen'] }}" alt="Imagen de {{ $miembro['nombre'] }}">
+                            </div>
+                            <div class="info-miembro">
+                                <h5>{{ $miembro['nombre'] }}</h5>
+                                <p><strong>Email:</strong> {{ $miembro['email'] }}</p>
+                                <a href="{{ $miembro['orcid'] }}" class="orcid-btn" target="_blank">
+                                    <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" class="orcid-icon" alt="ORCID"> ORCID
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const cards = document.querySelectorAll(".tarjeta-miembro");
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.style.opacity = 1;
-                    card.style.transform = "translateY(0)";
-                }, index * 200);
-            });
-        });
-    </script>
 
     @endsection
 

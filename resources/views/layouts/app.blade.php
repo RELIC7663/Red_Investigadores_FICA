@@ -155,165 +155,213 @@
         /*Estilos miembros.blade.php */
 
         /* Tarjeta de Miembro */
-        .tarjeta-miembro {
-            background: #ffffff;
-            border-radius: 15px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-            max-width: 300px;
-            margin: 20px auto;
+
+        .fondo-miembros {
+            margin-top: 20px;
         }
 
-        /* Fondo gris para la imagen */
-        .fondo-img {
-            background-color: #d3d3d3;
-            /* Color gris */
-            border-radius: 15px;
-            /* Bordes redondeados */
-            padding: 10px;
+        .tarjeta-miembro-estetica {
+            background-color: #f2f2f2;
+            width: 100%;
+            max-width: none;
+            border-radius: 8px;
             display: flex;
             align-items: center;
-            justify-content: center;
-            width: 250px;
-            height: 200px;
-            margin: 0 auto;
+            padding: 0;
+            gap: 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
 
-        /* Imagen de perfil completamente redonda */
-        .fondo-img img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            /* Hace la imagen redonda */
-            border: 5px solid #ccc;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+
+        .foto-miembro {
+            flex: 0 0 120px;
+            height: 100%;
+        }
+
+        .foto-miembro img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            /* Asegura que la imagen cubra el espacio sin deformarse */
+            border: none;
+            border-radius: 0;
+            box-shadow: none;
+            display: block;
         }
 
-
-        /* Información dentro de la tarjeta */
-        .tarjeta-miembro h5 {
-            margin-top: 15px;
-            font-weight: bold;
-            font-size: 18px;
-
+        .info-miembro {
+            flex: 1;
+            padding: 15px;
         }
 
-        .tarjeta-info {
-            margin-top: 10px;
-            text-align: left;
+        .info-miembro h5 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+            color: #2d2d2d;
+        }
+
+        .info-miembro p {
             font-size: 14px;
-            line-height: 1.5;
+            margin-bottom: 10px;
+            color: #555;
         }
 
-        .tarjeta-info p {
-            margin: 0;
-        }
-
-        .tarjeta-info strong {
-            font-weight: bold;
-        }
-
-        /* Botón de ORCID */
         .orcid-btn {
-            display: inline-block;
-            margin-top: 10px;
-            color: #3d3a3a;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 8px 12px;
-            border: 2px solid #2d312f;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            padding: 6px 10px;
+            background: white;
+            border: 1.5px solid #2d312f;
             border-radius: 5px;
-            transition: background 0.3s, color 0.3s, transform 0.3s;
+            text-decoration: none;
+            color: #2d312f;
+            transition: all 0.3s ease;
         }
 
         .orcid-btn:hover {
-            background: #2c302c;
-            color: white;
-            transform: scale(1.1);
-            box-shadow: 0 4px 8px rgba(131, 150, 135, 0.5);
-
+            background-color: #2d312f;
+            color: #fff;
         }
 
-        /* Fondo con desenfoque */
-        .fondo-miembros {
-            background: url('https://www.utn.edu.ec/wp-content/uploads/2022/06/campus-utn.jpg') no-repeat center center fixed;
-            background-size: cover;
-            position: relative;
-            padding: 50px 0;
-
+        .orcid-icon {
+            width: 16px;
+            height: 16px;
         }
 
-        .fondo-miembros::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.3);
-            z-index: -1;
-        }
+
 
         /* Directiva */
 
-        .directivas-container {
-            background-color: rgba(255, 255, 255, 0.9);
-            padding: 40px 20px;
-            margin: 30px auto;
-            max-width: 1200px;
-            border-radius: 10px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        /* Contenedor general */
+.directivas-container {
+    padding: 50px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
-            .titulo_H1 {
-                text-align: center;
-                margin: 40px 0 30px;
-                font-weight: 700;
-                font-size: 36px;
-                color: #DC0000;
-                position: relative;
-                padding-bottom: 15px;
-                font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-            }
+/* Título principal */
+.titulo_H1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-            .titulo_H1::after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 80px;
-                height: 3px;
-                background-color: #DC0000;
-            }
+.titulo_H1::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: #DC0000;
+    border-radius: 5px;
+}
 
-            .titulo {
-                text-align: center;
-                margin: 30px 0 20px;
-                font-weight: 600;
-                font-size: 24px;
-                color: #333333;
-                position: relative;
-                padding-bottom: 10px;
-                font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            }
+/* Título del cargo */
+.titulo {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-            .titulo::after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 50%;
-                transform: translateX(-50%);
-                width: 50px;
-                height: 2px;
-                background-color: #DC0000;
-            }
-        }
+.titulo::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #DC0000;
+    border-radius: 3px;
+}
+
+/* Tarjeta horizontal estilo moderno */
+.tarjeta-miembro-estetica {
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto 60px auto;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-miembro-estetica:hover {
+    transform: translateY(-3px);
+}
+
+.foto-miembro {
+    flex: 0 0 130px;
+    max-width: 130px;
+    margin-right: 20px;
+}
+
+.foto-miembro img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+/* Info */
+.info-miembro {
+    flex: 1;
+}
+
+.info-miembro h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.info-miembro p {
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* Botón ORCID */
+.orcid-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    padding: 6px 12px;
+    background: white;
+    border: 2px solid #2d312f;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #2d312f;
+    transition: all 0.3s ease;
+}
+
+.orcid-btn:hover {
+    background-color: #2d312f;
+    color: white;
+}
+
+.orcid-icon {
+    width: 20px;
+    height: 20px;
+}
+
     </style>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
