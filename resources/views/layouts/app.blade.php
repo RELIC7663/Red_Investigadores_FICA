@@ -199,77 +199,75 @@
             background-color: #212529;
         }
 
-        /* ==== Estilos ESPECÍFICOS para vista Directiva ==== */
+        /* === ESTILOS PARA vista-directiva === */
+
         .vista-directiva .directiva-card {
             background-color: #f8f9fa;
-            border-radius: 14px;
+            border-radius: 12px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            margin-bottom: 30px;
             transition: transform 0.3s ease;
+            
         }
-
-        .vista-directiva .directiva-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .vista-directiva .directiva-foto {
-            flex: 0 0 140px;
-            max-width: 140px;
+        .titulo_H1_directiva {
+            color: #002147;
+            font-weight: 800;
+            margin-bottom: 50px;
+            margin-top: 50px;
             text-align: center;
         }
 
-        .vista-directiva .directiva-foto img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-            object-fit: contain;
-            background: transparent;
+        .vista-directiva .directiva-card:hover {
+            transform: translateY(-5px);
         }
 
-        .vista-directiva .directiva-info {
-            flex: 1;
-            margin-left: 25px;
+        .vista-directiva .directiva-foto img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            background-color: transparent;
         }
 
         .vista-directiva .directiva-info .cargo {
-            font-size: 20px;
-            font-weight: 800;
+            font-size: 1.2rem;
+            font-weight: 700;
             color: #002147;
-            margin-bottom: 5px;
         }
 
         .vista-directiva .directiva-info .nombre {
-            font-size: 18px;
+            font-size: 1rem;
             font-weight: 600;
             color: #333;
-            margin-bottom: 6px;
+            margin-top: 4px;
         }
 
         .vista-directiva .directiva-info .email {
-            font-size: 15px;
-            color: #666;
-            margin-bottom: 8px;
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 6px;
         }
 
         .vista-directiva .btn-orcid {
-            background-color: #212529;
+            background-color: #2d312f;
             color: white;
-            font-size: 14px;
+            font-size: 0.9rem;
             padding: 6px 12px;
             border-radius: 6px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            gap: 5px;
+            transition: background-color 0.3s ease;
         }
 
         .vista-directiva .btn-orcid:hover {
             background-color: #000;
         }
 
+        .vista-directiva .orcid-icon {
+            width: 20px;
+            height: 20px;
+        }
 
         /* Estilos para la sección de Objetivos */
 
@@ -312,7 +310,7 @@
             color: var(--secondary-color);
         }
 
-        
+
 
         .ripis-objective-text h3 {
             color: var(--primary-color);
