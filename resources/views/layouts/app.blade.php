@@ -199,133 +199,72 @@
             background-color: #212529;
         }
 
-        /* Directiva */
-
-        /* Contenedor general */
-        .directivas-container {
-            padding: 50px 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* Título principal */
-        .titulo_H1 {
-            text-align: center;
-            font-size: 32px;
-            font-weight: 800;
-            color: #000;
-            text-transform: uppercase;
-            margin-bottom: 50px;
-            position: relative;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .titulo_H1::after {
-            content: "";
-            position: absolute;
-            bottom: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: #DC0000;
-            border-radius: 5px;
-        }
-
-        /* Título del cargo */
-        .titulo {
-            text-align: center;
-            font-size: 22px;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 20px;
-            position: relative;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        .titulo::after {
-            content: "";
-            position: absolute;
-            bottom: -8px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: #DC0000;
-            border-radius: 3px;
-        }
-
-        /* Tarjeta horizontal estilo moderno */
-        .tarjeta-miembro-estetica {
-            background-color: #fff;
-            border-radius: 10px;
+        /* ==== Estilos ESPECÍFICOS para vista Directiva ==== */
+        .vista-directiva .directiva-card {
+            background-color: #f8f9fa;
+            border-radius: 14px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
             display: flex;
             align-items: center;
             padding: 20px;
-            margin: 0 auto 60px auto;
-            max-width: 900px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
 
-        .tarjeta-miembro-estetica:hover {
-            transform: translateY(-3px);
+        .vista-directiva .directiva-card:hover {
+            transform: translateY(-4px);
         }
 
-        .foto-miembro {
-            flex: 0 0 130px;
-            max-width: 130px;
-            margin-right: 20px;
+        .vista-directiva .directiva-foto {
+            flex: 0 0 140px;
+            max-width: 140px;
         }
 
-        .foto-miembro img {
+        .vista-directiva .directiva-foto img {
             width: 100%;
             height: auto;
-            object-fit: cover;
-            border-radius: 0;
+            border-radius: 12px;
+            object-fit: contain;
+            background-color: transparent;
         }
 
-        /* Info */
-        .info-miembro {
+        .vista-directiva .directiva-info {
             flex: 1;
         }
 
-        .info-miembro h5 {
-            font-size: 18px;
-            font-weight: 700;
+        .vista-directiva .directiva-info .cargo {
+            font-size: 20px;
+            font-weight: 800;
+            color: #002147;
             margin-bottom: 5px;
-            color: #222;
         }
 
-        .info-miembro p {
+        .vista-directiva .directiva-info .nombre {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 6px;
+        }
+
+        .vista-directiva .directiva-info .email {
             font-size: 15px;
-            margin-bottom: 10px;
-            color: #555;
+            color: #666;
+            margin-bottom: 8px;
         }
 
-        /* Botón ORCID */
-        .orcid-btn {
+        .vista-directiva .btn-orcid {
+            background-color: #212529;
+            color: white;
+            font-size: 14px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 6px;
-            font-size: 14px;
-            padding: 6px 12px;
-            background: white;
-            border: 2px solid #2d312f;
-            border-radius: 6px;
-            text-decoration: none;
-            color: #2d312f;
-            transition: all 0.3s ease;
         }
 
-        .orcid-btn:hover {
-            background-color: #2d312f;
-            color: white;
-        }
-
-        .orcid-icon {
-            width: 20px;
-            height: 20px;
+        .vista-directiva .btn-orcid:hover {
+            background-color: #000;
         }
     </style>
     <!-- Bootstrap CSS -->
