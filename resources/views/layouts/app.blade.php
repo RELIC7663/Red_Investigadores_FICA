@@ -154,68 +154,165 @@
 
         /*Estilos miembros.blade.php */
 
-        /* Tarjeta de Miembro */
 
-        .fondo-miembros {
-            margin-top: 20px;
+        .tarjeta-miembro-horizontal {
+            background: #f1f1f1;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            transition: transform 0.2s ease;
+            height: 100%;
         }
 
-        .tarjeta-miembro-estetica {
-            background-color: #f2f2f2;
+        .tarjeta-miembro-horizontal:hover {
+            transform: translateY(-3px);
+        }
+
+        .foto-horizontal {
+            flex: 0 0 130px;
+            max-width: 130px;
+        }
+
+        .foto-horizontal img {
             width: 100%;
-            max-width: none;
+            height: auto;
+            object-fit: contain;
+            background-color: transparent;
             border-radius: 8px;
+            display: block;
+        }
+
+        .btn-miembro {
+            background-color: #343a40;
+            color: white;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 6px 14px;
+            border: none;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .btn-miembro:hover {
+            background-color: #212529;
+        }
+
+        /* Directiva */
+
+        /* Contenedor general */
+        .directivas-container {
+            padding: 50px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* Título principal */
+        .titulo_H1 {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 800;
+            color: #000;
+            text-transform: uppercase;
+            margin-bottom: 50px;
+            position: relative;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .titulo_H1::after {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: #DC0000;
+            border-radius: 5px;
+        }
+
+        /* Título del cargo */
+        .titulo {
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            position: relative;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .titulo::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: #DC0000;
+            border-radius: 3px;
+        }
+
+        /* Tarjeta horizontal estilo moderno */
+        .tarjeta-miembro-estetica {
+            background-color: #fff;
+            border-radius: 10px;
             display: flex;
             align-items: center;
-            padding: 0;
-            gap: 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            padding: 20px;
+            margin: 0 auto 60px auto;
+            max-width: 900px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
+        .tarjeta-miembro-estetica:hover {
+            transform: translateY(-3px);
+        }
 
         .foto-miembro {
-            flex: 0 0 120px;
-            height: 100%;
+            flex: 0 0 130px;
+            max-width: 130px;
+            margin-right: 20px;
         }
 
         .foto-miembro img {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: cover;
-            border: none;
             border-radius: 0;
-            box-shadow: none;
-            display: block;
         }
 
+        /* Info */
         .info-miembro {
             flex: 1;
-            padding: 15px;
         }
 
         .info-miembro h5 {
-            font-size: 16px;
-            font-weight: 600;
-            margin-bottom: 4px;
-            color: #2d2d2d;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #222;
         }
 
         .info-miembro p {
-            font-size: 14px;
+            font-size: 15px;
             margin-bottom: 10px;
             color: #555;
         }
 
+        /* Botón ORCID */
         .orcid-btn {
             display: inline-flex;
             align-items: center;
             gap: 6px;
             font-size: 14px;
-            padding: 6px 10px;
+            padding: 6px 12px;
             background: white;
-            border: 1.5px solid #2d312f;
-            border-radius: 5px;
+            border: 2px solid #2d312f;
+            border-radius: 6px;
             text-decoration: none;
             color: #2d312f;
             transition: all 0.3s ease;
@@ -223,145 +320,13 @@
 
         .orcid-btn:hover {
             background-color: #2d312f;
-            color: #fff;
+            color: white;
         }
 
         .orcid-icon {
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
         }
-
-
-
-        /* Directiva */
-
-        /* Contenedor general */
-.directivas-container {
-    padding: 50px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* Título principal */
-.titulo_H1 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 800;
-    color: #000;
-    text-transform: uppercase;
-    margin-bottom: 50px;
-    position: relative;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-.titulo_H1::after {
-    content: "";
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background-color: #DC0000;
-    border-radius: 5px;
-}
-
-/* Título del cargo */
-.titulo {
-    text-align: center;
-    font-size: 22px;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 20px;
-    position: relative;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-.titulo::after {
-    content: "";
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #DC0000;
-    border-radius: 3px;
-}
-
-/* Tarjeta horizontal estilo moderno */
-.tarjeta-miembro-estetica {
-    background-color: #fff;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    margin: 0 auto 60px auto;
-    max-width: 900px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.tarjeta-miembro-estetica:hover {
-    transform: translateY(-3px);
-}
-
-.foto-miembro {
-    flex: 0 0 130px;
-    max-width: 130px;
-    margin-right: 20px;
-}
-
-.foto-miembro img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 0;
-}
-
-/* Info */
-.info-miembro {
-    flex: 1;
-}
-
-.info-miembro h5 {
-    font-size: 18px;
-    font-weight: 700;
-    margin-bottom: 5px;
-    color: #222;
-}
-
-.info-miembro p {
-    font-size: 15px;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-/* Botón ORCID */
-.orcid-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 14px;
-    padding: 6px 12px;
-    background: white;
-    border: 2px solid #2d312f;
-    border-radius: 6px;
-    text-decoration: none;
-    color: #2d312f;
-    transition: all 0.3s ease;
-}
-
-.orcid-btn:hover {
-    background-color: #2d312f;
-    color: white;
-}
-
-.orcid-icon {
-    width: 20px;
-    height: 20px;
-}
-
     </style>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">

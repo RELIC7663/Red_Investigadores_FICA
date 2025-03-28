@@ -25,17 +25,19 @@
                     sostenible.</p>
             </div>
         </div>
-        </div>
-        <!-- Sección de Miembros (DENTRO DEL FONDO NEGRO) -->
-        <div class="fondo-miembros">
+
+        <!-- Sección de Miembros -->
+        <section class="directivas-container py-5">
+            <h2 class="titulo_H1 text-center mb-5">Miembros de la Red</h2>
+
             <div class="container">
-                <div class="row justify-content-center">
+                <div class="row g-4">
                     @php
                         $miembros = [
                             [
                                 'nombre' => 'Daisy Elizabeth Imbaquingo Esparza',
                                 'email' => 'deimbaquingo@utn.edu.ec',
-                                'imagen' => 'https://software.utn.edu.ec/wp-content/uploads/2024/05/daisy.jpg',
+                                'imagen' => asset('images/foto_miembros/deie_miembro.png'),
                                 'orcid' => 'https://orcid.org/0000-0002-6412-6257',
                             ],
                             [
@@ -155,27 +157,35 @@
                     @endphp
 
                     @foreach ($miembros as $miembro)
-                    <div class="col-12 col-md-6 mb-4">
-                        <div class="tarjeta-miembro-estetica">
-                                <div class="foto-miembro">
-                                    <img src="{{ $miembro['imagen'] }}" alt="Foto de {{ $miembro['nombre'] }}">
+                        <div class="col-12 col-md-6">
+                            <div class="tarjeta-miembro-horizontal d-flex flex-column flex-md-row align-items-center p-3">
+
+                                <!-- FOTO -->
+                                <div class="foto-horizontal me-md-4 mb-3 mb-md-0 text-center">
+                                    <img src="{{ $miembro['imagen'] }}" alt="Foto de {{ trim($miembro['nombre']) }}">
                                 </div>
-                                <div class="info-miembro">
-                                    <h5>{{ $miembro['nombre'] }}</h5>
-                                    <p><strong>Email:</strong> {{ $miembro['email'] }}</p>
-                                    <a href="{{ $miembro['orcid'] }}" target="_blank" class="orcid-btn">
-                                        <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-                                            alt="ORCID iD" class="orcid-icon">
-                                        ORCID
-                                    </a>
+
+                                <!-- INFO -->
+                                <div class="contenido-miembro w-100 text-center text-md-start">
+                                    <h5 class="fw-bold text-dark mb-1">{{ trim($miembro['nombre']) }}</h5>
+                                    <p class="mb-2 text-muted">{{ $miembro['email'] }}</p>
+
+                                    @if (!str_contains($miembro['orcid'], 'xxxx'))
+                                        <a href="{{ $miembro['orcid'] }}" target="_blank" class="btn-miembro">
+                                            <img src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
+                                                alt="ORCID" class="me-1">
+                                            Ver ORCID
+                                        </a>
+                                    @else
+                                        <span class="text-muted small fst-italic">ORCID no disponible</span>
+                                    @endif
                                 </div>
                             </div>
                         </div>
                     @endforeach
-
                 </div>
             </div>
-        </div>
+        </section>
     @endsection
 </body>
 
