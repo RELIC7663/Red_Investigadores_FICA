@@ -1,118 +1,77 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="es" id="ripis-objectives-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Objetivos - RIPIS</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/objetivos.css') }}" rel="stylesheet">
     <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
+    <!-- Agregar Font Awesome o Heroicons si quieres usar iconos predefinidos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-
 <body>
-
     @extends('layouts.app')
     @section('content')
-
-    <!-- Hero Carousel -->
-    <div id="heroCarousel" class="carousel slide mt-5" data-bs-ride="carousel">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"></button>
-        </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <div class="hero">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content text-center">
-                        <h1 class="display-4 fw-bold">Fomentar el Conocimiento</h1>
-                        <p class="lead">Impulsar la investigación en ingeniería sostenible, promoviendo políticas públicas y colaboraciones estratégicas.</p>
-                    </div>
-                    <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                        <img src="{{ asset('images/fotos_objetivos/foto_01.jpg') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
-                    </div>
-                </div>
+    <section class="objetivo-section ripis-objectives-section">
+        <div class="container">
+            <div class="section-header ripis-objectives-header">
+                <h1>Objetivos de la Red RIPIS</h1>
+                <p class="text-center mt-3">Nuestra visión estratégica para impulsar la investigación sostenible</p>
             </div>
 
-            <div class="carousel-item">
-                <div class="hero">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content text-center">
-                        <h1 class="display-4 fw-bold">Colaboración Internacional</h1>
-                        <p class="lead">Crear alianzas con instituciones académicas, ONGs y sectores productivos a nivel global.</p>
-                    </div>
-                    <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                        <img src="{{ asset('images/fotos_objetivos/foto_02.png') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
-                    </div>
-                </div>
-            </div>
+            @php
+                $objetivos = [
+                    [
+                        'titulo' => 'Fomentar el Conocimiento',
+                        'descripcion' => 'Impulsamos la investigación en ingeniería sostenible mediante políticas públicas innovadoras y colaboraciones estratégicas que transforman el panorama tecnológico.',
+                        'icono' => 'fas fa-graduation-cap'  // Usando clase de Font Awesome
+                    ],
+                    [
+                        'titulo' => 'Colaboración Internacional',
+                        'descripcion' => 'Construimos alianzas sólidas con instituciones académicas, ONGs y sectores productivos globales para amplificar el impacto de nuestras investigaciones.',
+                        'icono' => 'fas fa-globe'
+                    ],
+                    [
+                        'titulo' => 'Participación Activa',
+                        'descripcion' => 'Promovemos la integración dinámica de nuestros investigadores en espacios de debate, proyectos interdisciplinarios y iniciativas de vanguardia.',
+                        'icono' => 'fas fa-users'
+                    ],
+                    [
+                        'titulo' => 'Generación de Proyectos',
+                        'descripcion' => 'Apoyamos el desarrollo de investigaciones innovadoras que aborden desafíos críticos de sostenibilidad y promuevan el desarrollo social.',
+                        'icono' => 'fas fa-lightbulb'
+                    ],
+                    [
+                        'titulo' => 'Desarrollo de Políticas',
+                        'descripcion' => 'Diseñamos y proponemos marcos regulatorios que fortalezcan la investigación en procesos industriales sostenibles y faciliten la innovación.',
+                        'icono' => 'fas fa-clipboard-list'
+                    ],
+                    [
+                        'titulo' => 'Inclusión y Ética',
+                        'descripcion' => 'Garantizamos la transparencia, diversidad y responsabilidad ética en todas nuestras investigaciones, creando un ecosistema de investigación inclusivo.',
+                        'icono' => 'fas fa-balance-scale'
+                    ]
+                ];
+            @endphp
 
-            <div class="carousel-item">
-                <div class="hero">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content text-center">
-                        <h1 class="display-4 fw-bold">Participación Activa</h1>
-                        <p class="lead">Garantizar la integración de los miembros en reuniones, debates y proyectos clave.</p>
+            <div class="row g-4 ripis-objectives-grid">
+                @foreach ($objetivos as $objetivo)
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="objetivo-card ripis-objective-card h-100">
+                            <div class="objetivo-icon ripis-objective-icon">
+                                <i class="{{ $objetivo['icono'] }}"></i>
+                            </div>
+                            <div class="objetivo-text ripis-objective-text">
+                                <h3>{{ $objetivo['titulo'] }}</h3>
+                                <p>{{ $objetivo['descripcion'] }}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                        <img src="{{ asset('images/fotos_objetivos/foto_03.jpg') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="hero">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content text-center">
-                        <h1 class="display-4 fw-bold">Generación de Proyectos</h1>
-                        <p class="lead">Apoyar el desarrollo de investigaciones alineadas con los objetivos de sostenibilidad y desarrollo social.</p>
-                    </div>
-                    <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                        <img src="{{ asset('images/fotos_objetivos/foto_01.jpg') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="hero">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content text-center">
-                        <h1 class="display-4 fw-bold">Desarrollo de Políticas</h1>
-                        <p class="lead">Proponer políticas públicas para fortalecer la investigación en procesos sostenibles.</p>
-                    </div>
-                    <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                        <img src="{{ asset('images/fotos_objetivos/foto_04.jpg') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
-                    </div>
-                </div>
-            </div>
-
-            <div class="carousel-item">
-                <div class="hero">
-                    <div class="hero-overlay"></div>
-                    <div class="hero-content text-center">
-                        <h1 class="display-4 fw-bold">Inclusión y Ética</h1>
-                        <p class="lead">Asegurar transparencia y ética en las investigaciones promovidas por la RIPIS.</p>
-                    </div>
-                    <div class="d-flex justify-content-center my-4 bg-white p-2 rounded">
-                        <img src="{{ asset('images/fotos_objetivos/foto_01.jpg') }}" alt="Fomentar el Conocimiento" style="max-height: 250px; border-radius: 10px;">
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
-
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-        </button>
-    </div>
+    </section>
     @endsection
-
 </body>
-
 </html>

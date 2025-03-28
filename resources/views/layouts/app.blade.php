@@ -207,6 +207,7 @@
             display: flex;
             align-items: center;
             padding: 20px;
+            margin-bottom: 30px;
             transition: transform 0.3s ease;
         }
 
@@ -217,6 +218,7 @@
         .vista-directiva .directiva-foto {
             flex: 0 0 140px;
             max-width: 140px;
+            text-align: center;
         }
 
         .vista-directiva .directiva-foto img {
@@ -224,11 +226,12 @@
             height: auto;
             border-radius: 12px;
             object-fit: contain;
-            background-color: transparent;
+            background: transparent;
         }
 
         .vista-directiva .directiva-info {
             flex: 1;
+            margin-left: 25px;
         }
 
         .vista-directiva .directiva-info .cargo {
@@ -265,6 +268,95 @@
 
         .vista-directiva .btn-orcid:hover {
             background-color: #000;
+        }
+
+
+        /* Estilos para la sección de Objetivos */
+
+        .ripis-objectives-section {
+            padding: 80px 0;
+        }
+
+        .ripis-objective-card {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 33, 71, 0.08);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 33, 71, 0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .ripis-objective-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 33, 71, 0.12);
+        }
+
+        .ripis-objective-icon {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 102, 162, 0.1);
+            border-radius: 50%;
+        }
+
+        .ripis-objective-icon i {
+            font-size: 40px;
+            color: var(--secondary-color);
+        }
+
+        
+
+        .ripis-objective-text h3 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .ripis-objective-text p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .ripis-objectives-header {
+            color: var(--primary-color);
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .ripis-objectives-header h1 {
+            font-weight: 800;
+            position: relative;
+            display: inline-block;
+        }
+
+        .ripis-objectives-header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .ripis-objectives-section {
+                padding: 40px 0;
+            }
+
+            .ripis-objective-card {
+                margin-bottom: 20px;
+            }
         }
     </style>
     <!-- Bootstrap CSS -->
