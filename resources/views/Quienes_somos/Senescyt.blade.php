@@ -29,7 +29,12 @@
                 <p>La red ha obtenido la aprobación oficial para llevar a cabo proyectos en diversas áreas sostenibles de ingeniería...</p>
             </div>
         </div>
+        <a href="{{ asset('AprobacionSenecyt/SENESCYT-SDIC-DIC-2025-0023-O.pdf') }}" download class="btn btn-success">
+            Descargar Certificado SENESCYT
+        </a>
+        
     </div>
+    
     @endsection
 </body>
 
