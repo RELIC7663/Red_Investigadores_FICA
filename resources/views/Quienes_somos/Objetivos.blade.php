@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es" id="ripis-objectives-page">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,68 +11,84 @@
     <!-- Agregar Font Awesome o Heroicons si quieres usar iconos predefinidos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     @extends('layouts.app')
     @section('content')
-    <section class="objetivo-section ripis-objectives-section">
-        <div class="container">
-            <div class="section-header ripis-objectives-header">
-                <h1>Objetivos de la Red RIPIS</h1>
-                <p class="text-center mt-3">Nuestra visión estratégica para impulsar la investigación sostenible</p>
-            </div>
+        <section class="objetivo-section ripis-objectives-section">
+            <div class="container">
+                <div class="section-header ripis-objectives-header">
+                    <h1>Objetivos de la Red RIPIS</h1>
+                    <p class="text-center mt-3">Nuestra visión estratégica para impulsar la investigación sostenible</p>
+                </div>
 
-            @php
-                $objetivos = [
-                    [
-                        'titulo' => 'Fomentar el Conocimiento',
-                        'descripcion' => 'Impulsamos la investigación en ingeniería sostenible mediante políticas públicas innovadoras y colaboraciones estratégicas que transforman el panorama tecnológico.',
-                        'icono' => 'fas fa-graduation-cap'  // Usando clase de Font Awesome
-                    ],
-                    [
-                        'titulo' => 'Colaboración Internacional',
-                        'descripcion' => 'Construimos alianzas sólidas con instituciones académicas, ONGs y sectores productivos globales para amplificar el impacto de nuestras investigaciones.',
-                        'icono' => 'fas fa-globe'
-                    ],
-                    [
-                        'titulo' => 'Participación Activa',
-                        'descripcion' => 'Promovemos la integración dinámica de nuestros investigadores en espacios de debate, proyectos interdisciplinarios y iniciativas de vanguardia.',
-                        'icono' => 'fas fa-users'
-                    ],
-                    [
-                        'titulo' => 'Generación de Proyectos',
-                        'descripcion' => 'Apoyamos el desarrollo de investigaciones innovadoras que aborden desafíos críticos de sostenibilidad y promuevan el desarrollo social.',
-                        'icono' => 'fas fa-lightbulb'
-                    ],
-                    [
-                        'titulo' => 'Desarrollo de Políticas',
-                        'descripcion' => 'Diseñamos y proponemos marcos regulatorios que fortalezcan la investigación en procesos industriales sostenibles y faciliten la innovación.',
-                        'icono' => 'fas fa-clipboard-list'
-                    ],
-                    [
-                        'titulo' => 'Inclusión y Ética',
-                        'descripcion' => 'Garantizamos la transparencia, diversidad y responsabilidad ética en todas nuestras investigaciones, creando un ecosistema de investigación inclusivo.',
-                        'icono' => 'fas fa-balance-scale'
-                    ]
-                ];
-            @endphp
+                @php
+                    $objetivos = [
+                        [
+                            'titulo' => 'Colaboración Interdisciplinaria',
+                            'descripcion' =>
+                                'Promover la colaboración entre investigadores, académicos y profesionales de diversas disciplinas para abordar los desafíos complejos relacionados con los procesos de ingeniería sostenible.',
+                            'icono' => 'fas fa-handshake',
+                        ],
+                        [
+                            'titulo' => 'Soluciones Innovadoras y Sostenibles',
+                            'descripcion' =>
+                                'Desarrollar soluciones innovadoras y sostenibles en los campos de la producción industrial, agropecuaria, forestal, biotecnología, energía y seguridad alimentaria, contribuyendo al avance del conocimiento y la tecnología.',
+                            'icono' => 'fas fa-lightbulb',
+                        ],
+                        [
+                            'titulo' => 'Sostenibilidad Urbana',
+                            'descripcion' =>
+                                'Contribuir a la creación de ciudades más inclusivas, seguras y sostenibles a través de la investigación en tecnologías y procesos que promuevan la mejora de la sostenibilidad urbana.',
+                            'icono' => 'fas fa-city',
+                        ],
+                        [
+                            'titulo' => 'Difusión y Transferencia del Conocimiento',
+                            'descripcion' =>
+                                'Crear plataformas y mecanismos para la difusión y transferencia de conocimientos y tecnologías desarrolladas dentro de la red, asegurando su aplicación efectiva en el sector productivo y en políticas públicas.',
+                            'icono' => 'fas fa-share-alt',
+                        ],
+                        [
+                            'titulo' => 'Fortalecimiento Institucional',
+                            'descripcion' =>
+                                'Aumentar la capacidad de investigación y desarrollo de las instituciones participantes, promoviendo la formación de investigadores y el fortalecimiento de grupos de investigación en los campos de interés de la red.',
+                            'icono' => 'fas fa-building-columns',
+                        ],
+                        [
+                            'titulo' => 'Impacto en el Desarrollo Socioeconómico',
+                            'descripcion' =>
+                                'Impactar positivamente en el desarrollo socioeconómico de las comunidades, contribuyendo a la reducción de la pobreza, la creación de empleo digno y el mejoramiento de la calidad de vida.',
+                            'icono' => 'fas fa-chart-line',
+                        ],
+                        [
+                            'titulo' => 'Sostenibilidad Ambiental',
+                            'descripcion' =>
+                                'Fomentar prácticas y tecnologías que aseguren la sostenibilidad ambiental, la conservación de recursos naturales y la mitigación del cambio climático, alineándose con los Objetivos de Desarrollo Sostenible.',
+                            'icono' => 'fas fa-leaf',
+                        ],
+                    ];
+                @endphp
 
-            <div class="row g-4 ripis-objectives-grid">
-                @foreach ($objetivos as $objetivo)
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="objetivo-card ripis-objective-card h-100">
-                            <div class="objetivo-icon ripis-objective-icon">
-                                <i class="{{ $objetivo['icono'] }}"></i>
-                            </div>
-                            <div class="objetivo-text ripis-objective-text">
-                                <h3>{{ $objetivo['titulo'] }}</h3>
-                                <p>{{ $objetivo['descripcion'] }}</p>
+
+                <div class="objetivos-container">
+                    @foreach ($objetivos as $objetivo)
+                        <div class="objetivo-item p-4">
+                            <div class="d-flex align-items-start">
+                                <div class="objetivo-icon me-4">
+                                    <i class="{{ $objetivo['icono'] }} fa-lg"></i>
+                                </div>
+                                <div class="objetivo-content">
+                                    <h4>{{ $objetivo['titulo'] }}</h4>
+                                    <p>{{ $objetivo['descripcion'] }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                </div>
+
             </div>
-        </div>
-    </section>
+        </section>
     @endsection
 </body>
+
 </html>

@@ -271,89 +271,71 @@
 
         /* Estilos para la sección de Objetivos */
 
-        .ripis-objectives-section {
-            padding: 80px 0;
+        .ripis-objectives-header {
+            padding: 3rem 0;
+            background: linear-gradient(rgba(245, 247, 250, 0.8), rgba(245, 247, 250, 0.8));
+            border-radius: 8px;
+            margin-bottom: 2.5rem;
         }
-
-        .ripis-objective-card {
-            background-color: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 33, 71, 0.08);
-            overflow: hidden;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(0, 33, 71, 0.05);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        
+        .ripis-objectives-header h1 {
+            color: #0a58ca;
+            font-weight: 700;
             text-align: center;
-            padding: 30px;
+            margin-bottom: 0.5rem;
         }
-
-        .ripis-objective-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 33, 71, 0.12);
+        
+        .objetivo-item {
+            transition: all 0.3s ease;
+            border-left: 4px solid transparent;
+            margin-bottom: 1rem;
+            background-color: #fff;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+            border-radius: 6px;
         }
-
-        .ripis-objective-icon {
-            width: 80px;
-            height: 80px;
-            margin-bottom: 20px;
+        
+        .objetivo-item:hover {
+            border-left: 4px solid #0a58ca;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .objetivo-icon {
+            background-color: #e7f1ff;
+            color: #0a58ca;
+            padding: 15px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: rgba(0, 102, 162, 0.1);
-            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            flex-shrink: 0;
         }
-
-        .ripis-objective-icon i {
-            font-size: 40px;
-            color: var(--secondary-color);
+        
+        .objetivo-content h4 {
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.7rem;
         }
-
-
-
-        .ripis-objective-text h3 {
-            color: var(--primary-color);
-            font-weight: 700;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-
-        .ripis-objective-text p {
-            color: #666;
+        
+        .objetivo-content p {
+            color: #555;
             line-height: 1.6;
         }
-
-        .ripis-objectives-header {
-            color: var(--primary-color);
-            margin-bottom: 50px;
-            text-align: center;
+        
+        .objetivo-section {
+            padding: 4rem 0;
+            background-color: #f8f9fa;
         }
-
-        .ripis-objectives-header h1 {
-            font-weight: 800;
-            position: relative;
-            display: inline-block;
-        }
-
-        .ripis-objectives-header h1::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 4px;
-            background-color: var(--secondary-color);
-        }
-
+        
         @media (max-width: 768px) {
-            .ripis-objectives-section {
-                padding: 40px 0;
+            .d-flex.align-items-start {
+                flex-direction: column;
             }
-
-            .ripis-objective-card {
-                margin-bottom: 20px;
+            
+            .objetivo-icon {
+                margin-bottom: 1rem;
             }
         }
     </style>
