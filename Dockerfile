@@ -44,7 +44,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN composer install --no-dev --optimize-autoloader --no-interaction --no-progress --prefer-dist
 
 # Generar clave de aplicación
-RUN php artisan key:generate
+# RUN php artisan key:generate
 
 # Cachear configuración y rutas
 RUN php artisan config:cache \
